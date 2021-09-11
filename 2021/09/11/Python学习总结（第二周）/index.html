@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | YY行空</title>
+  <title>YY行空</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Python学习总结（第二周）在这一周里，我们首先学习了容器型的数据类型——列表，元组，字符串，集合，字典。而容器型数据类型分为可变型和不可变型，其中列表，集合和字典属于可变型数据，元组和字符串是不可变数据。可变型数据类型：如果数据类型对应的变量的值发生了改变，但是它的内存地址还是原来的地址时，那么这个数据类型就是可变型数据。不可变数据类型 ：如果该数据类型对应的变量的值发生了改变，它对应的内存地">
+<meta property="og:type" content="article">
 <meta property="og:title" content="YY行空">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%89/index.html">
 <meta property="og:site_name" content="YY行空">
+<meta property="og:description" content="Python学习总结（第二周）在这一周里，我们首先学习了容器型的数据类型——列表，元组，字符串，集合，字典。而容器型数据类型分为可变型和不可变型，其中列表，集合和字典属于可变型数据，元组和字符串是不可变数据。可变型数据类型：如果数据类型对应的变量的值发生了改变，但是它的内存地址还是原来的地址时，那么这个数据类型就是可变型数据。不可变数据类型 ：如果该数据类型对应的变量的值发生了改变，它对应的内存地">
 <meta property="og:locale">
+<meta property="og:image" content="c:/Users/YY/AppData/Roaming/Typora/typora-user-images/image-20210731162824327.png">
+<meta property="article:published_time" content="2021-09-11T09:24:14.228Z">
+<meta property="article:modified_time" content="2021-07-31T09:01:28.737Z">
 <meta property="article:author" content="YinYu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/YY/AppData/Roaming/Typora/typora-user-images/image-20210731162824327.png">
   
     <link rel="alternative" href="/atom.xml" title="YY行空" type="application/atom+xml">
   
@@ -150,235 +156,352 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Python学习总结（第二周）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python学习总结（第二周）"><a href="#Python学习总结（第二周）" class="headerlink" title="Python学习总结（第二周）"></a>Python学习总结（第二周）</h1><p>在这一周里，我们首先学习了容器型的数据类型——列表，元组，字符串，集合，字典。而容器型数据类型分为可变型和不可变型，其中<strong>列表，集合和字典属于可变型数据，元组和字符串是不可变数据</strong>。<strong>可变型数据类型</strong>：如果数据类型对应的变量的值发生了改变，但是它的内存地址还是原来的地址时，那么这个数据类型就是可变型数据。<strong>不可变数据类型</strong> ：如果该数据类型对应的变量的值发生了改变，它对应的内存地址也发生了改变，那么这个数据类型就是不可变数据。</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>在定义列表时，我们使用了三种方法：字面量语法（建议使用）、构造器语法、生成式（推导式语法）。列表的一系列操作：切片、索引、合并，成员运算，比较大小和重复运算。列表的方法，在这里，我们学习了</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法名</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">index（value[,start,end]）</td>
+<td align="center">value:要索引的元素，start：开始查找的位置，end：结束位置</td>
+</tr>
+<tr>
+<td align="center">count（value）</td>
+<td align="center">value：要统计出现次数的元素</td>
+</tr>
+<tr>
+<td align="center">append（value）</td>
+<td align="center">在末尾添加元素</td>
+</tr>
+<tr>
+<td align="center">insert（index，value）</td>
+<td align="center">在指定位置添加元素</td>
+</tr>
+<tr>
+<td align="center">pop（[index]）</td>
+<td align="center">默认删除末尾元素，可指定要删除元素的位置</td>
+</tr>
+<tr>
+<td align="center">remove（value[,start,end]）</td>
+<td align="center">删除指定元素，可设置要删除的位置区间</td>
+</tr>
+<tr>
+<td align="center">clear（）</td>
+<td align="center">清空列表</td>
+</tr>
+</tbody></table>
+<p>在后面我们还讲解了列表的翻转和排序，这里主要讲解了两种方法和排序算法：<strong>reverse方法</strong>，翻转列表元素，直接在原地进行翻转；<strong>sort方法</strong>，对列表原地排序，可设置参数reverse=True为降序排序，默认为False升序排序。</p>
+<p><strong>简单选择排序</strong>：依次在列表中寻找最大的元素，首先找出第一大的元素，然后放在第一个位置上，然后再找出第二大的元素，放在第二个位置上，接下来就是第三，第四······直到最后一个元素。该算法时间复杂度log2(n^2).</p>
+<p><strong>冒泡排序：</strong>列表中的元素两两比较，较大的元素往后走，在经过第一轮的比较后，最大的元素就会移到最后一个位置，当所有元素比较完之后，最小的元素就会浮起来了。该算法的时间复杂度也是log2（N^2）.</p>
+<h3 id="补充（随机抽取和乱序）"><a href="#补充（随机抽取和乱序）" class="headerlink" title="补充（随机抽取和乱序）"></a>补充（随机抽取和乱序）</h3><p>下面直接上代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">nums = [random.randrange(<span class="number">101</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>)]</span><br><span class="line"><span class="built_in">print</span>(nums)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对nums进行无放回抽样，抽10个元素</span></span><br><span class="line">nums_sample = random.sample(nums,k=<span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(nums_sample)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对nums进行有放回抽样，抽10个</span></span><br><span class="line">nums_choices = random.choices(nums,k=<span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(nusm_choices)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在nums中抽取一个元素</span></span><br><span class="line">num = random.choice(nums)</span><br><span class="line"><span class="built_in">print</span>(num)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打乱nums的顺序,实现随机乱序</span></span><br><span class="line">random.shuffle(nums)</span><br><span class="line"><span class="built_in">print</span>(nums)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果：</span></span><br><span class="line"><span class="comment"># [37, 50, 71, 22, 64, 47, 89, 23, 91, 26, 81, 19, 62, 56, 97, 90, 58, 41, 17, 54]</span></span><br><span class="line"><span class="comment"># [17, 50, 54, 64, 91]</span></span><br><span class="line"><span class="comment"># [91, 41, 58, 91, 89]</span></span><br><span class="line"><span class="comment"># 54</span></span><br><span class="line"><span class="comment"># [90, 41, 91, 22, 56, 26, 81, 54, 89, 47, 17, 71, 19, 50, 62, 37, 64, 23, 58, 97]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><p>元组是不可变数据类型，只能进行读操作，不能增加元素，删除元素和更改内容。元组的基本操作有：重复运算（重复运算得到一个新的元组），合并（新的元组），成员运算（True or False），切片和索引，index（查看索引位置），count（计数）。这一系列操作只能查看或生成新的元组，并<strong>不会改变原来的元组</strong>。</p>
+<p><strong>拆包：</strong>元组可以进行拆包操作，拆包时，把元组中的元素赋给相对应的变量，如果元组中的元素多余变量，那么会出现ValueError: too many values to unpack异常，这时可以在变量前加一个*号，这个符号代表该变量是可变型，多出来的值就会全部赋值给打星号的变量。</p>
+<p>元组操作和列表很像，除了不能增、删、改元素之外。</p>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串也是一个不可变数据类型，只能读，不能改。在定义字符串时 ，建议使用字面量语法。字符串的基本操作有：重复（生成新字符串），成员运算（返回False or True），合并（生成新新字符串），比较（返回True or False）。字符串的遍历和列表是一样的，这里就不在重复了。</p>
+<h3 id="字符串的方法："><a href="#字符串的方法：" class="headerlink" title="字符串的方法："></a>字符串的方法：</h3><table>
+<thead>
+<tr>
+<th align="center">方法名</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">upper()</td>
+<td align="center">把字符串转为大写</td>
+</tr>
+<tr>
+<td align="center">lower()</td>
+<td align="center">把字符串转为小写</td>
+</tr>
+<tr>
+<td align="center">capitalize()</td>
+<td align="center">把字符串首字母大写</td>
+</tr>
+<tr>
+<td align="center">title（）</td>
+<td align="center">把字符串每个单词首字母大写</td>
+</tr>
+<tr>
+<td align="center">isdigit（）</td>
+<td align="center">判断字符串是否由数字组成</td>
+</tr>
+<tr>
+<td align="center">isalpha()</td>
+<td align="center">判断字符串是否由字母组成</td>
+</tr>
+<tr>
+<td align="center">isascii()</td>
+<td align="center">判断字符串是不是ASCII，如果不是，返回False</td>
+</tr>
+<tr>
+<td align="center">startswith(str)</td>
+<td align="center">判断字符串是否以特定形式开头</td>
+</tr>
+<tr>
+<td align="center">endswith(str)</td>
+<td align="center">判断字符串是否以特定形式结尾</td>
+</tr>
+<tr>
+<td align="center">index(str[,start,end])</td>
+<td align="center">在字符串中查找元素，可以设置查找区域，若找不到，直接报错</td>
+</tr>
+<tr>
+<td align="center">find(str[,start,end])</td>
+<td align="center">用法和index一致，但是，找不到元素，会返回None</td>
+</tr>
+</tbody></table>
+<p>字符串的操作方法还有很多，这里就不一一列举了，如果想了解更多的，可以去<a href="vhttps://docs.python.org/3.9/library/stdtypes.htm">python官网</a>了解.</p>
+<h3 id="格式化字符串"><a href="#格式化字符串" class="headerlink" title="格式化字符串"></a>格式化字符串</h3><p>直接上代码，可以更直观的看到结果。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;hello, world&#x27;</span></span><br><span class="line"><span class="comment"># 居中</span></span><br><span class="line"><span class="built_in">print</span>(a.center(<span class="number">80</span>, <span class="string">&#x27;-&#x27;</span>))</span><br><span class="line"><span class="comment"># 右对齐</span></span><br><span class="line"><span class="built_in">print</span>(a.rjust(<span class="number">80</span>, <span class="string">&#x27;-&#x27;</span>))</span><br><span class="line"><span class="comment"># 左对齐</span></span><br><span class="line"><span class="built_in">print</span>(a.ljust(<span class="number">80</span>, <span class="string">&#x27;-&#x27;</span>))</span><br><span class="line"></span><br><span class="line">b = <span class="string">&#x27;123&#x27;</span></span><br><span class="line"><span class="comment"># 零填充（左边补0）</span></span><br><span class="line"><span class="built_in">print</span>(b.zfill(<span class="number">6</span>))</span><br><span class="line"></span><br><span class="line">c = <span class="number">1234000</span></span><br><span class="line">d = <span class="number">567</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%d + %d = %d&#x27;</span> % (c, d, c + d))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;d&#125;</span> / <span class="subst">&#123;c&#125;</span> = <span class="subst">&#123;d / c:<span class="number">.4</span>e&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125; + &#123;&#125; = &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(c, d, c + d))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#123;0&#125; + &#123;1&#125; = &#123;2&#125;&#x27;</span>.<span class="built_in">format</span>(c, d, c + d))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="comment"># ----------------------------------hello, world----------------------------------</span></span><br><span class="line"><span class="comment"># --------------------------------------------------------------------hello, world</span></span><br><span class="line"><span class="comment"># hello, world--------------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># 000123</span></span><br><span class="line"><span class="comment"># 1234000 + 567 = 1234567</span></span><br><span class="line"><span class="comment"># 567 / 1234000 = 4.5948e-04</span></span><br><span class="line"><span class="comment"># 1234000 + 567 = 1234567</span></span><br><span class="line"><span class="comment"># 1234000 + 567 = 1234567</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="修剪，拆分，替换、合并"><a href="#修剪，拆分，替换、合并" class="headerlink" title="修剪，拆分，替换、合并"></a>修剪，拆分，替换、合并</h3><blockquote>
+<p><em><strong>修剪</strong></em>：使用strip（[chars]）方法可以修剪字符串两边空格或其他特定符号,默认修剪空格可以设置要修剪的符号，lstrip（）修剪左边，rstrip（）修剪右边。</p>
+<p><em><strong>拆分</strong></em>：使用split（[chars]）方法可以对字符串进行拆分，默认用‘，’拆分，可以设置按照什么符号拆分。</p>
+<p><em><strong>替换</strong></em>：使用replace（old，new[,start,end]）可以替换字符串中的内容。字符串是不可变的，在替换字符串时，不会更改原来的字符串，会生成一个新的字符串。</p>
+<p><em><strong>合并</strong></em>：合并时，可以使用‘+’号拼接，也可以使用str.join()方法合并。</p>
+</blockquote>
+<h3 id="编码和解码"><a href="#编码和解码" class="headerlink" title="编码和解码"></a>编码和解码</h3><p><strong>编码</strong>：将一种形式或格式的字符集编成另一种字符集，encode(),设置要转化的字符集，默认utf-8编码。</p>
+<p><strong>解码</strong>：是编码的逆过程，decod()解码。</p>
+<blockquote>
+<p><strong>注意</strong>：</p>
+<p>1.选择字符集（编码）的时候，最佳的选择（也是默认的）是utf-8</p>
+<p>2.编码和解码的字符集要保持一致，否则就会出现乱码的现象</p>
+<p>3.不能用Unicode-8859-1编码保存中文，否会出现编码黑洞，中文变成？</p>
+<p>4.UTF-8是Unicode的一种实现方案，也是一种变长的编码，最少一个字节（英文和数字），最少四个字节（Emoji），表示中文用3个字节。</p>
+</blockquote>
+<h3 id="扩展（凯撒密码）"><a href="#扩展（凯撒密码）" class="headerlink" title="扩展（凯撒密码）"></a>扩展（凯撒密码）</h3><p>凯撒密码是通过对字符串的替换，实现对明文进行加密的一种方式。</p>
+<p>加密有两种方式：<strong>对称加密</strong>：加密和解密使用相同的密钥。<strong>非对称加密</strong>：加密和解密使用不同的密钥（公钥，私钥），适用于互联网应用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">&#x27;hello, world&#x27;</span></span><br><span class="line"></span><br><span class="line">table = <span class="built_in">str</span>.maketrans(<span class="string">&#x27;abcdefghijklmnopqrstuvwxyz&#x27;</span>, <span class="string">&#x27;defghijklmnopqrstuvwxyzabc&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(message.translate(table))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="comment"># khoor, zruog</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>相信大家对集合这个词都不陌生，在初中我们的数学就已经学过了，集合就是由一个或多个确定的元素所构成的整体。集合的三要素：</p>
+<ol>
+<li>无序性，集合中的元素是无序的。</li>
+<li>互异性，集合中的元素都是独一无二的，也就是说每一个元素只能出现一次。</li>
+<li>确定性，在一个集合中，任意一个元素，要么在集合中，要么不在一个集合中，不允许出现不确定情况。</li>
+</ol>
+<p>在创建一个集合时，建议使用字面量语法，这里<em><strong>注意</strong></em>一下，<strong>创建空集合时，不能直接set1 = {}，这样创建的不是空集合，而是一个空字典，要set2 = set（）这样创建</strong>。在集合中不能使用下标索引，在使用下标索引时，会出现TypeError类型错误，因为集合时无序的，所以<strong>不能使用下表索引</strong>。</p>
+<p>在遍历集合中的元素时，不能项列表、元组、字符串那样使用下标索引遍历，只能直接对集合中的元素遍历。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="string">&#x27;python&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>, <span class="string">&#x27;C#&#x27;</span>, <span class="string">&#x27;Go&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> elem <span class="keyword">in</span> set1:</span><br><span class="line">    <span class="built_in">print</span>(elem, end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="comment"># C# python Java Go </span></span><br></pre></td></tr></table></figure>
+
+<h3 id="集合的运算"><a href="#集合的运算" class="headerlink" title="集合的运算"></a>集合的运算</h3><p>集合的运算讲了成员运算(这里上次列表中讲到的成员运算是一样的)，交集，并集，差集（我有你没有的元素），对称差集还有判断真子集，子集，超集。在上述的集中运算中，求交集。并集。对称差集时，可以交换两个集合的位置，但是其它运算不可以交换位置。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>&#125;</span><br><span class="line">set2 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 交集</span></span><br><span class="line"><span class="built_in">print</span>(set1 &amp; set2)</span><br><span class="line"><span class="built_in">print</span>(set1.intersection(set2))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 并集</span></span><br><span class="line"><span class="built_in">print</span>(set1 | set2)</span><br><span class="line"><span class="built_in">print</span>(set1.union(set2))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 差集</span></span><br><span class="line"><span class="built_in">print</span>(set1 - set2)</span><br><span class="line"><span class="built_in">print</span>(difference(set2))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对称差集</span></span><br><span class="line"><span class="built_in">print</span>(set1 ^ set2)</span><br><span class="line"><span class="built_in">print</span>((set1 | set2) - (set1 &amp; set2))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="comment"># &#123;1&#125;</span></span><br><span class="line"><span class="comment"># &#123;1&#125;</span></span><br><span class="line"><span class="comment"># &#123;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&#125;</span></span><br><span class="line"><span class="comment"># &#123;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&#125;</span></span><br><span class="line"><span class="comment"># &#123;9, 3, 5, 7&#125;</span></span><br><span class="line"><span class="comment"># &#123;9, 3, 5, 7&#125;</span></span><br><span class="line"><span class="comment"># &#123;2, 3, 4, 5, 6, 7, 8, 9, 10&#125;</span></span><br><span class="line"><span class="comment"># &#123;2, 3, 4, 5, 6, 7, 8, 9, 10&#125;</span></span><br><span class="line"><span class="comment"># &#123;2, 3, 4, 5, 6, 7, 8, 9, 10&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="集合的操作"><a href="#集合的操作" class="headerlink" title="集合的操作"></a>集合的操作</h3><p>集合在存储元素时，底层采用了一种叫哈希存储的的存储方式，<strong>哈希存储是通过哈希函数将集合中的元素作为自变量，计算得到一个函数值，然后将函数值作为该元素的地址储存在内存中</strong>。如果不同的元素计算得到的函数值相同，那么将会产生哈希冲突，所以在设置哈希函数的时候要尽量保证不同的对象计算后得到不同的函数值。<strong>哈希存储的关键就是设计一个好的哈希函数。</strong>在集合中查找元素的效率是远高于列表的（因为集合是哈希存储，而列表是顺序存储），不依赖问题的规模，是一种常量级时间复杂度的存储方案。<strong>可变型容器都是无法存放到集合中的</strong>，因为可变型容器无法计算出对应的哈希码。所以说集合中无法存放列表，集合和字典。</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">add(value)</td>
+<td align="center">增加元素，随机添加</td>
+</tr>
+<tr>
+<td align="center">pop()</td>
+<td align="center">随机删除一个元素</td>
+</tr>
+<tr>
+<td align="center">discard(value)</td>
+<td align="center">指定要删除的元素</td>
+</tr>
+<tr>
+<td align="center">clear()</td>
+<td align="center">清空元素</td>
+</tr>
+</tbody></table>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>字典是由键和值组合在一起，然后再由这些键值对组成的，字典中的键必须是不可变类型。这里字典的创建方法也还是使用上述列表的三种方式，使用len（）可以查看字典键的长度。在遍历字典时，我们可以选择遍历字典的键或者值，或者是都遍历，在遍历键时，可以使用keys()方法获取所有的键，遍历值得时候使用values()获取所有的值，items()方法可以得到所有的键值对。</p>
+<h3 id="字典的运算"><a href="#字典的运算" class="headerlink" title="字典的运算"></a>字典的运算</h3><p>在进行字典的运算的时候，首先我们要知道，字典的索引是通过键来索引的，而不是下标索引。字典的索引运算是放在赋值运算符的左边，如果索引对应的键是存在的，那就更新它的值，如果是不存在，就增加一组新的键值对。但是，当你索引时，你要索引的键不存在时，就会出现KeyError错误。所以建议使用get函数通过key获取value，如果key不存在，会返回一个空值，还可以设置返回值，如果存在就会返回key对应的value，如果不存在就会返回设置的value，而且不会在字典中添加新的键值对。在删除键值对时，可以使用del，使用del删除时，是没有返回值的，还可以使用pop（key）删除，可以返回被删除键值对的值，但是你要删除的键必须存在，否则就会出现ValueError错误。</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">get(key[,value])</td>
+<td align="center">获取key对应的value，如果不存在就返回设置的value</td>
+</tr>
+<tr>
+<td align="center">pop(key)</td>
+<td align="center">删除指定的键值对，可以返回key对应的value</td>
+</tr>
+<tr>
+<td align="center">popitem()</td>
+<td align="center">删除字典末尾的一对键值对</td>
+</tr>
+<tr>
+<td align="center">setdefault(key[,value])</td>
+<td align="center">返回key对应的value，如果不存在就添加新的键值对</td>
+</tr>
+<tr>
+<td align="center">update(dict)</td>
+<td align="center">合并两个字典，存在相同的键，就更新键对应的值，没有就添加进去</td>
+</tr>
+</tbody></table>
+<h2 id="JSON格式的字符串"><a href="#JSON格式的字符串" class="headerlink" title="JSON格式的字符串"></a>JSON格式的字符串</h2><p>json是一种轻量级的数据格式，现在大多数网站都提供JSON格式的的文本。JSON是大多数网站和数据接口服务使用的数据格式。那么我们这次主要学习如何把JSON格式转化成python中的字典。</p>
+<p>我们要先下载三方库JSON，在pycharm中的终端里面下载。首先进入pycharm，点击Terminal，你会进入到下面的页面中</p>
+<p><img src="C:\Users\YY\AppData\Roaming\Typora\typora-user-images\image-20210731162824327.png" alt="image-20210731162824327"></p>
+<p>你要在你创建的虚拟环境下下载，进入到这个界面后，先把下载来源改为国内的镜像，我使用的是pip config set global.index-url <a target="_blank" rel="noopener" href="https://pypi.doubanio.com/simple%EF%BC%8C%E6%9B%B4%E6%94%B9%E9%95%9C%E5%83%8F%E5%90%8E%EF%BC%8C%E8%BE%93%E5%85%A5pip">https://pypi.doubanio.com/simple，更改镜像后，输入pip</a> install json就开始下载了。现在就可以使用了。下面我们直接代码演示</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">json格式内容</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 把json格式的内容转化为字典</span></span><br><span class="line">news_dict = json.loads(data)</span><br><span class="line">news_list = news_dict[<span class="string">&#x27;newslist&#x27;</span>]  <span class="comment"># 取出字典中，newslist键对应的值</span></span><br><span class="line"><span class="keyword">for</span> new <span class="keyword">in</span> news_list:</span><br><span class="line">    <span class="built_in">print</span>(new[<span class="string">&#x27;title&#x27;</span>])</span><br><span class="line">    <span class="built_in">print</span>(new[<span class="string">&#x27;url&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码中json格式内容可以直接从网站上粘贴过来，但是这种方式明显是不适用的，我们可以直接连接到网站的接口，获取里面的内容，再转化成字典。这里需要下载三方库，按照刚才的办法，在Terminal里下载三方库requests。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">word = <span class="built_in">input</span>(<span class="string">&#x27;你梦到了什么：&#x27;</span>)</span><br><span class="line">resq = requests.get(</span><br><span class="line">    url=<span class="string">&#x27;http://api.tianapi.com/txapi/dream/index&#x27;</span>,</span><br><span class="line">    params=&#123;<span class="string">&#x27;key&#x27;</span>: <span class="string">&#x27;daa483dd14963bec47e507265182d2cb&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;word&#x27;</span>: word,</span><br><span class="line">    <span class="string">&#x27;num&#x27;</span>: <span class="number">20</span>&#125;</span><br><span class="line">)</span><br><span class="line"><span class="comment"># 从响应中获取JSON数据直接转化为字典</span></span><br><span class="line">news_dict =resq.json()</span><br><span class="line">news_list = newa_dict[<span class="string">&#x27;newslist&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> new <span class="keyword">in</span> news_list:</span><br><span class="line">    <span class="built_in">print</span>(new[<span class="string">&#x27;result&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<p>我们先发出一个请求，连接到相应的网站，通过get函数我们可以获取一个响应，把响应储存到rest，再调用json（）函数把得到的json数据转化为字典。得到字典后，我们就可以使用上述字典的方法操作了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这一周里，我们一共学习了五种容器型数据类型，三种是可变型数据类型（列表，集合，字典），两种不可变型数据类型（元组，字符串）。除了这五个内容外，还做了一些扩展，比如随机抽取和乱序，凯撒密码，json数据格式。学习内容逐渐增加，内容难度也比第一周要难一些，在上课的时候就要把不会的问题当天解决，不然积少成多，到了后面就很难往前学。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80(%E4%BA%8C)/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.408Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E5%88%97%E8%A1%A8%E7%9A%84%E6%8E%92%E5%BA%8F%E5%92%8C%E5%8F%8D%E8%BD%AC/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.398Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.388Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%B8%89%E5%91%A8%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%BA%8C%E5%A4%A9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.368Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%94%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.338Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E5%9B%9B%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%B8%89%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.268Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.228Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%BA%8C%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.169Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.169Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -402,8 +525,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

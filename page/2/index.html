@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | YY行空</title>
+  <title>YY行空</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="YY行空">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="YY行空">
 <meta property="og:locale">
 <meta property="article:author" content="YinYu">
@@ -152,232 +152,314 @@
           <div id="js-content" class="content-ll">
             
   
-  
+    <article id="post-Python学习第04天" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python学习第04天"><a href="#Python学习第04天" class="headerlink" title="Python学习第04天"></a>Python学习第04天</h1><p>经过一个星期的学习，我们已经初步了解了数据的基本类型，但是在应用中，基本的数据类型已经不能满足我们的使用了，那么这周，我们开始学习更高级的数据类型——容器型。</p>
+<p>首先，我们先学习列表。</p>
+<h2 id="认识列表"><a href="#认识列表" class="headerlink" title="认识列表"></a>认识列表</h2><p>列表（list）是一种数据项构成的有限序列，按照一定的线性顺序，排列而成的数据项的集合。列表可支持数据的增、删、改、查、切片、索引等操作。列表是一个可变型容器。</p>
+<h3 id="创建列表"><a href="#创建列表" class="headerlink" title="创建列表"></a>创建列表</h3><p>方式一：字面量语法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]</span><br><span class="line"><span class="built_in">print</span>(list1)</span><br></pre></td></tr></table></figure>
+
+<p>方式二：构造器语法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list3 = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">10</span>))</span><br><span class="line"><span class="built_in">print</span>(list3)</span><br><span class="line"></span><br><span class="line">list2 = <span class="built_in">list</span>(<span class="string">&#x27;asdfghjkl&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(list2)</span><br></pre></td></tr></table></figure>
+
+<p>方式三：生成式（推导式语法）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list4 = [i ** <span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>)]</span><br><span class="line"><span class="built_in">print</span>(list4)</span><br></pre></td></tr></table></figure>
+
+<p>使用字面量语法，列表中的元素需要使用逗号隔开，而且列表中可以放<em><strong>多种类型的数据，元素也可以重复出现</strong></em>，不过，建议列表中最好放置同种类型的数据。方式三中列表的推导式，相当于for i in range(1,10):    list4.append(i ** 2),使用一个for循环，每循环一次，就在列表中添加一个元素（使用append方法是添加元素，在后面会讲到）。</p>
+<h3 id="列表的操作"><a href="#列表的操作" class="headerlink" title="列表的操作"></a>列表的操作</h3><p>列表支持拼接，重复，切片，索引，成员运算和比较运算。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">list5 = [<span class="number">1</span>, <span class="number">10</span>, <span class="number">100</span>] </span><br><span class="line"><span class="comment"># 重复</span></span><br><span class="line">list6 = list5 * <span class="number">4</span></span><br><span class="line"><span class="built_in">print</span>(list6)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拼接</span></span><br><span class="line">list6 += list5</span><br><span class="line"><span class="built_in">print</span>(list6)</span><br><span class="line">list6.extend(list5)</span><br><span class="line"><span class="built_in">print</span>(list6)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切片</span></span><br><span class="line"><span class="built_in">print</span>(list6[::-<span class="number">1</span>])   <span class="comment"># 倒序</span></span><br><span class="line"><span class="built_in">print</span>(list6[<span class="number">1</span>:<span class="number">5</span>:<span class="number">2</span>])  <span class="comment"># 在1到5的位置中隔一位取一个</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>[:<span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span>(list6[<span class="number">1</span>:])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 索引</span></span><br><span class="line"><span class="built_in">print</span>(list6[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>[-<span class="number">1</span>])  <span class="comment"># 取列表的最后一位</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 成员运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">10</span> <span class="keyword">in</span> list6)   <span class="comment"># True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">10</span> <span class="keyword">not</span> <span class="keyword">in</span> list6)    <span class="comment">#False</span></span><br><span class="line"></span><br><span class="line">list7 = [<span class="string">&#x27;hello,world&#x27;</span>]</span><br><span class="line">list8 = [<span class="string">&#x27;hello, goodbye&#x27;</span>]</span><br><span class="line"><span class="comment"># 比较</span></span><br><span class="line"><span class="built_in">print</span>(list7 == list8)  <span class="comment"># False</span></span><br><span class="line"><span class="built_in">print</span>(list7 &gt; list8)   <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
+
+<p>在进行元素的比较时，是对列表相对应位置的元素进行比较。元素的索引分为正向索引和负向索引，正向索引范围0到N - 1，负向索引范围-N到-1，如果超出范围会报错。</p>
+<h3 id="列表的遍历"><a href="#列表的遍历" class="headerlink" title="列表的遍历"></a>列表的遍历</h3><p>遍历就是一次取出列表中的每个元素</p>
+<p>方式一：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">items = [<span class="string">&#x27;Python&#x27;</span>, <span class="string">&#x27;Go&#x27;</span>, <span class="string">&#x27;C#&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(items)):</span><br><span class="line">    <span class="built_in">print</span>(items[i])   <span class="comment"># 按照索引取值</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<p>方式二：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 改遍历方式只对列表进行读操作，不能更改里面的元素</span></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> items:</span><br><span class="line">    <span class="built_in">print</span>(item)</span><br></pre></td></tr></table></figure>
+
+<p>方式三：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 可以输出列表中的索引和与之对应的元素</span></span><br><span class="line"><span class="keyword">for</span> i, item <span class="keyword">in</span> <span class="built_in">enumerate</span>(items):</span><br><span class="line">    <span class="built_in">print</span>(i, item)</span><br></pre></td></tr></table></figure>
+
+<h3 id="列表的方法"><a href="#列表的方法" class="headerlink" title="列表的方法"></a>列表的方法</h3><p>列表是一个可变的容器，可以对其增加元素，删除元素，改变元素，每个操作都有相应的方法可以执行操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">items = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;grape&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;apple &#x27;</span>, <span class="string">&#x27;waxbreey&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加元素</span></span><br><span class="line">items.append(<span class="string">&#x27;apple&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(items)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 统计元素出现的次数</span></span><br><span class="line"><span class="built_in">print</span>(items.count(<span class="string">&#x27;apple&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找元素的位置</span></span><br><span class="line"><span class="built_in">print</span>(items.index(<span class="string">&#x27;grape&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除元素</span></span><br><span class="line">items.pop() <span class="comment"># pop删除元素，默认删除末尾的一个元素，可以返回被删除的元素</span></span><br><span class="line"><span class="built_in">print</span>(items)</span><br><span class="line">items.pop(<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(items)</span><br><span class="line"></span><br><span class="line">items.remove(<span class="string">&#x27;apple&#x27;</span>)  <span class="comment"># 删除出现的第一个元素</span></span><br><span class="line"><span class="built_in">print</span>(items)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更改列表中的元素</span></span><br><span class="line">items[<span class="number">1</span>] = <span class="string">&#x27;apple&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(items)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清空列表</span></span><br><span class="line">items.clear()</span><br><span class="line"><span class="built_in">print</span>(items)</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>注意：</strong></em>使用remove方法删除元素时，当要删除的元素不存在时，程序会报错。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80(%E4%BA%8C)/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.408Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E7%AC%AC04%E5%A4%A9/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E5%88%97%E8%A1%A8%E7%9A%84%E6%8E%92%E5%BA%8F%E5%92%8C%E5%8F%8D%E8%BD%AC/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.398Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Python学习03天（第一周总结）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="学习Python第03天"><a href="#学习Python第03天" class="headerlink" title="学习Python第03天"></a>学习Python第03天</h2><p>经过了一周的学习，我们从认识python开始学习，到目前为止，了解了python的历史、优点、安装、<strong>交互式环境</strong>（通过在终端进行输入操作，操作被执行后，通过窗口输出结果），学习了3种如何运行代码的方式：</p>
+<ol>
+<li><p>打开Windows的“命令提示符”工具，输入python然后回车，会进入到python的交互式环境。</p>
+</li>
+<li><p>安装IPython，使用python的包管理工具pip安装：pip install ipython 。下载安装之后，输入ipython启动，然后就可以进入交互式环境了。</p>
+</li>
+<li><p>安装PyCharm（集成开发环境）：PyCharm是一个更专业的开发工具，适用于商业项目的开发，对于刚开始学习python的人来说，下载社区版已经足够使用了。</p>
+<p>当我们安装好运行python程序所需的环境之后，我们就可以开始接下来的python编程之路了。</p>
+</li>
+</ol>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>首先，我们要先知道什么是<strong>变量，变量就是数据的载体</strong>。变量是一个用来保存数据的内存空间，可以被读取和修改。每一个变量都有一种数据类型，在这一周里，我们学习了一些常用的数据类型：</p>
+<ul>
+<li>整型（int）：表示任意大小的整数，同时支持二进制（bin），八进制（oct），十六进制（hex）。</li>
+<li>浮点型（float）：也叫浮点数，表示小数。</li>
+<li>字符型（str）：用一对单引号或者双引号括起来的任意文本。</li>
+<li>布尔型（bool）：只有True、False两种值。非空字符串转成布尔类型对应的值都是True，反之，是False。</li>
+</ul>
+<h3 id="变量的命名"><a href="#变量的命名" class="headerlink" title="变量的命名"></a>变量的命名</h3><p>每一个变量都有一个名字，变量的命名需要遵守一定的规则：</p>
+<ol>
+<li>字母（Unicode字符）、数据、下划线，不能使用特殊字符，数字不能开头</li>
+<li>变量名区分大小写（大小写敏感）</li>
+<li>不能使用python中的关键字（有特殊含义的单词）和保留字（已经使用过的名字）</li>
+<li>见名知意（看到变量名就知道它代表了什么意思）</li>
+<li>变量名使用全小写，多个单词使用下划线连接（Snake case）</li>
+</ol>
+<h3 id="变量的使用"><a href="#变量的使用" class="headerlink" title="变量的使用"></a>变量的使用</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a1 = <span class="number">123</span></span><br><span class="line">b1 = <span class="number">34</span></span><br><span class="line"><span class="built_in">print</span>(a1 + b1)</span><br><span class="line"><span class="built_in">print</span>(a1 - b1)</span><br><span class="line"><span class="built_in">print</span>(a1 * b1)</span><br><span class="line"><span class="built_in">print</span>(a1 // b1)   <span class="comment"># 整除</span></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="comment"># 157</span></span><br><span class="line"><span class="comment"># 89</span></span><br><span class="line"><span class="comment"># 4182</span></span><br><span class="line"><span class="comment"># 3</span></span><br></pre></td></tr></table></figure>
+<h3 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h3><p>格式化输出可以控制输出结果的格式，按照你设定的格式进行输出。这里主要学习了两种常用的方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">123</span></span><br><span class="line">y = <span class="number">23</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%d + %d = %d&#x27;</span> % (x, y, x + y))  <span class="comment"># %d整型占位符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%f + %f = %f&#x27;</span> % (x, y ,x - y))  <span class="comment"># %f浮点型占位符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%.2f * %.2f = %.2f&#x27;</span> % (x, y, x * y) <span class="comment"># .2表示占两个位置</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x&#125;</span> + <span class="subst">&#123;y&#125;</span> = <span class="subst">&#123;x + y:<span class="number">.2</span>f&#125;</span>&#x27;</span>)  <span class="comment"># :.2表示占两个位置</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x&#125;</span> - <span class="subst">&#123;y&#125;</span> = <span class="subst">&#123;x - y:<span class="number">.2</span>f&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">赋值运算符</td>
+<td align="center">=</td>
+</tr>
+<tr>
+<td align="center">算术运算符</td>
+<td align="center">+  -  *  //  /  %  **(求幂)</td>
+</tr>
+<tr>
+<td align="center">复合运算符</td>
+<td align="center">+=  -=  !=   %=  /=  *=</td>
+</tr>
+<tr>
+<td align="center">关系运算符</td>
+<td align="center">&gt;=  &lt;=  !=  ==</td>
+</tr>
+<tr>
+<td align="center">逻辑运算符</td>
+<td align="center">and or not(and和or有短路功能)</td>
+</tr>
+</tbody></table>
+<h3 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h3><p>在日常生活中，每天都会做选择，比如吃饭，当你的大脑向你发出饥饿信号，这时候你会根据显示情况判断目前去不去吃饭，当然，一般情况下，都会选择去吃饭，在去吃饭时，你又会去选择吃什么。而在编程时，也是这样，当你需要判断一个问题再做选择时，就会使用分支结构，一个分支结构下可以嵌套使用另一个分支，<strong>为了保持代码可读性，嵌套层次不应太深。分支结构按照一定条件选择执行的路径，</strong>并不是按照物理顺序执行。</p>
+<h4 id="if语句的使用"><a href="#if语句的使用" class="headerlink" title="if语句的使用"></a>if语句的使用</h4><p>在构造分支结构时，可以使用if、elif、else关键字，在使用时，if和elif后面要跟条件和冒号，else后只需要跟冒号。if可以单独使用，但是elif和else不能单独使用。当有多个判断条件时，可以使用多分支结构if…elif…elif….。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">username = <span class="built_in">input</span>(<span class="string">&#x27;用户名：&#x27;</span>)</span><br><span class="line">password = <span class="built_in">input</span>(<span class="string">&#x27;密码：&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> username == <span class="string">&#x27;admin&#x27;</span> <span class="keyword">and</span> password == <span class="string">&#x27;Admin123&#x27;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;登录成功！&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;用户名或密码错误！登陆失败！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>使用多分支结构实现分段函数求值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;x = &#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> x &gt; <span class="number">1</span>:</span><br><span class="line">    y = <span class="number">3</span> * x - <span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> x &gt;= -<span class="number">1</span>:</span><br><span class="line">    y = x + <span class="number">2</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    y = <span class="number">5</span> * x + <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x&#125;</span>对应的y值:<span class="subst">&#123;y&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><p>当我们需要重复执行某个动作时，这时候我们可以使用循环来实现这个动作。循环结构就是程序中需要反复执行某个功能而设置的一种程序结构。python中，我们学习构造循环的两种做法：for-in循环和while循环。</p>
+<h4 id="for-in循环"><a href="#for-in循环" class="headerlink" title="for-in循环"></a>for-in循环</h4><p>当我们事先知道循环次数时，可以使用for-in循环，当循环次数达到指定次数时，就会结束循环。例如1-100之间的数求和。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">total = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">101</span>):</span><br><span class="line">    total += i</span><br><span class="line"><span class="built_in">print</span>(total)</span><br></pre></td></tr></table></figure>
+
+<p>首先定义一个total用来储存求和的值，使用for循环对1-100之间的值依次相加，得到的值赋给total，依次累加，直到加到100为止。</p>
+<blockquote>
+<p><em><strong>说明：</strong></em>range（1，101）用来构造以一个1-100的范围，每次循环可以得到一个变量i。range（1，101）是一个左闭右开的区间，取不到101，只能从1开始取值，一直取到100。range（）可以增加一个步长，例如：</p>
+<p>range（1，101，2），表示间隔两个，取一个值，前面取出来的就是1-100之间的奇数。</p>
+</blockquote>
+<h4 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h4><p>当你事先不知道循环次数时，可以使用while循环，当是使用while循环时，要设置一个可以结束循环的条件，如果不知道条件时，可以使用一个死循环，当达到想要的结果时，使用break结束循环。例如猜数游戏：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">num = random.randrange(<span class="number">1</span>,<span class="number">100</span>)</span><br><span class="line">count = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    count += <span class="number">1</span></span><br><span class="line">    guess = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;guess = &#x27;</span>))</span><br><span class="line">    <span class="keyword">if</span> num &gt; guess:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;小了,请重新输入：&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> num &lt; guess:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;大了，请重新输入：&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;恭喜你猜对了！&#x27;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> count == <span class="number">7</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;您的智商余额不足&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><em><strong>说明：</strong></em>使用break可以终止当前循环，它不可以终止自身所在循环之外的循环。</p>
+</blockquote>
+<h4 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h4><p>循环是可以嵌套使用的，可以在循环结构里层再构造一个循环结构，当然和分支结构一样，循环不能嵌套太深，不然会影响代码可读性，当循环嵌套太深，还有可能会影响代码性能，不方便后期维护。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打印九九乘法表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>):   <span class="comment"># 控制行输出</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i + <span class="number">1</span>):   <span class="comment"># 控制列输出</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;j&#125;</span> x <span class="subst">&#123;i&#125;</span> =  <span class="subst">&#123;j * i&#125;</span>&#x27;</span>,end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<h4 id="分支、循环应用例子"><a href="#分支、循环应用例子" class="headerlink" title="分支、循环应用例子"></a>分支、循环应用例子</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 寻找两个数的最大公约数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 辗转相除法</span></span><br><span class="line">x = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;x = &#x27;</span>))</span><br><span class="line">y = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;y = &#x27;</span>))</span><br><span class="line"><span class="keyword">while</span> x % y != <span class="number">0</span>:</span><br><span class="line">    x , y = x % y, x</span><br><span class="line"><span class="built_in">print</span>(y)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 寻找100-999之间的水仙花数</span></span><br><span class="line"></span><br><span class="line">l, mid, r = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>,<span class="number">1000</span>):</span><br><span class="line">    l = i // <span class="number">100</span></span><br><span class="line">    mid = i // <span class="number">10</span> % <span class="number">10</span></span><br><span class="line">    r = i % <span class="number">10</span></span><br><span class="line">    <span class="keyword">if</span> i == l ** <span class="number">3</span> + mid ** <span class="number">3</span> + r ** <span class="number">3</span>:</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 找出1-100之间所有的质数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">100</span>):</span><br><span class="line">    flag = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n):</span><br><span class="line">        <span class="keyword">if</span> n % i == <span class="number">0</span>：</span><br><span class="line">            flag = <span class="literal">False</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> flag:</span><br><span class="line">        <span class="built_in">print</span>(n,end=<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>第一周的学习，我们学到的都是python最基本的知识，当然，只有把基础学习好了，学熟了，以后的学习才不至于听不懂。学习是一个积累的过程，刚开始学习时，感觉很吃力是正常的，这时候我们要多多练习代码，把讲过的题目拿出来多复习复习。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/09/11/Python%E5%AD%A6%E4%B9%A003%E5%A4%A9%EF%BC%88%E7%AC%AC%E4%B8%80%E5%91%A8%E6%80%BB%E7%BB%93%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.388Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-68-正则表达式作业" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="利用正则表达式完成下面的操作"><a href="#利用正则表达式完成下面的操作" class="headerlink" title="利用正则表达式完成下面的操作:"></a>利用正则表达式完成下面的操作:</h3><p>1.用户名匹配 </p>
+<p>​            要求:    1.用户名只能包含数字 字母 下划线</p>
+<p>​                        2.不能以数字开头 </p>
+<p>​                        3.⻓度在 6 到 16 位范围内</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re_str = <span class="string">&#x27;[a-zA-Z_][a-zA-Z_0-9]&#123;5,15&#125;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(fullmatch(re_str, <span class="string">&#x27;A23456&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>密码匹配 </li>
+</ol>
+<p>​                要求:    1.不能包含!@#¥%^&amp;*这些特殊符号</p>
+<p>​                            2.必须以字母开头 </p>
+<p>​                            3.⻓度在 6 到 12 位范围内</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re_str = <span class="string">&#x27;[a-zA-Z][^!@#¥%^&amp;*]&#123;5,11&#125;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(fullmatch(re_str,<span class="string">&#x27;a12345678902&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>ipv4 格式的 ip 地址匹配<br>提示: IP地址的范围是 0.0.0.0 - 255.255.255.255</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">re_str = (<span class="string">r&#x27;(\d|[1-9]\d|1\d&#123;2&#125;|2[0-5]&#123;2&#125;)[.]&#x27;</span> +</span><br><span class="line">          <span class="string">&#x27;(\d|[1-9]\d|1\d&#123;2&#125;|2[0-5]&#123;2&#125;)[.]&#x27;</span> +</span><br><span class="line">          <span class="string">&#x27;(\d|[1-9]\d|1\d&#123;2&#125;|2[0-5]&#123;2&#125;)[.]&#x27;</span> +</span><br><span class="line">          <span class="string">&#x27;(\d|[1-9]\d|1\d&#123;2&#125;|2[0-5]&#123;2&#125;)&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(fullmatch(re_str, <span class="string">&#x27;1.1.0.0&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>提取用户输入数据中的数值 (数值包括正负数 还包括整数和小数在内) 并求和 </li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例如:“-3.14good87nice19bye” =====&gt; -3.14 + 87 + 19 = 102.86</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">re_str = <span class="string">&#x27;([+-]?\d&#123;1,&#125;\.\d*|0|[1-9]\d*)&#x27;</span></span><br><span class="line">result = findall(re_str, <span class="string">&#x27;-3.14good87nice19bye&#x27;</span>)</span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> result:</span><br><span class="line">    <span class="built_in">sum</span> += <span class="built_in">float</span>(i)</span><br><span class="line"><span class="built_in">print</span>(result, <span class="string">&#x27;\n和为：&#x27;</span>, <span class="built_in">sum</span>)</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><p>验证输入内容只能是汉字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re_str = <span class="string">&#x27;[\u4e00-\u9af5]+&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(fullmatch(re_str, <span class="string">&#x27;我爱你&#x27;</span>))</span><br></pre></td></tr></table></figure></li>
+<li><p>匹配整数或者小数（包括正数和负数）</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re_str = <span class="string">&#x27;[+-]?(([0]|[1-9]\d*)|(\d*).\d*)&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(fullmatch(re_str, <span class="string">&#x27;0.0002565545585&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li><p>使用正则表达式获取字符串中所有的日期信息 <strong>匹配年月日日期 格式：2018-12-6</strong></p>
+<p>注意年的范围是1<del>9999， 月的范围是1</del>12， 日的范围是1<del>30或者1</del>31或者1~29（不考虑闰年）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re_str = <span class="string">&#x27;\d&#123;1,4&#125;-((2-29)|(([13578]|1[02])-31)|(([469]|11)-30))&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(fullmatch(re_str, <span class="string">&#x27;999-1-31&#x27;</span>))</span><br></pre></td></tr></table></figure></li>
+<li><p>替换字符串中的不良内容：将输入的内容中的不良内容全部替换成*（参考王者荣耀聊天要求）</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 假设替换数字</span></span><br><span class="line">re_str = <span class="string">&#x27;\d&#123;1,&#125;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(sub(re_str, <span class="string">&#x27;*&#x27;</span>, <span class="string">&#x27;ab12cd3e4&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/09/11/68-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%9C%E4%B8%9A/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.368Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%94%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.338Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E5%9B%9B%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%B8%89%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.268Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.228Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%BA%8C%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.169Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.169Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
-  
-
-    
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </nav>
   
 
@@ -401,9 +483,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
+		isHome: true,
 		isPost: false,
-		isArchive: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | YY行空</title>
+  <title>YY行空</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Python学习总结（第四周）这周我们主要学习了python办公自动化，下面是我画的一个思维导图。  这一周内容有点多，有些小知识我可能忘记画上去了，但主要内容都在的。下面是对上面导图内容的细化。因为这个星期学的都是实操，所以下面大部分都是直接上代码。 文件操作 读文件读文件我们主要学习了两种方法，第一种： 12345678910111213# 打开文件，file --&gt; 文件路径，mode">
+<meta property="og:type" content="article">
 <meta property="og:title" content="YY行空">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E5%9B%9B%E5%91%A8%EF%BC%89/index.html">
 <meta property="og:site_name" content="YY行空">
+<meta property="og:description" content="Python学习总结（第四周）这周我们主要学习了python办公自动化，下面是我画的一个思维导图。  这一周内容有点多，有些小知识我可能忘记画上去了，但主要内容都在的。下面是对上面导图内容的细化。因为这个星期学的都是实操，所以下面大部分都是直接上代码。 文件操作 读文件读文件我们主要学习了两种方法，第一种： 12345678910111213# 打开文件，file --&gt; 文件路径，mode">
 <meta property="og:locale">
+<meta property="og:image" content="c:/Users/YY/AppData/Roaming/Typora/typora-user-images/image-20210814113350281.png">
+<meta property="og:image" content="c:/Users/YY/AppData/Roaming/Typora/typora-user-images/image-20210814115520424.png">
+<meta property="og:image" content="c:/Users/YY/AppData/Roaming/Typora/typora-user-images/image-20210815130238900.png">
+<meta property="og:image" content="c:/Users/YY/AppData/Roaming/Typora/typora-user-images/image-20210815140547009.png">
+<meta property="article:published_time" content="2021-09-11T09:24:14.308Z">
+<meta property="article:modified_time" content="2021-09-04T07:40:34.844Z">
 <meta property="article:author" content="YinYu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/YY/AppData/Roaming/Typora/typora-user-images/image-20210814113350281.png">
   
     <link rel="alternative" href="/atom.xml" title="YY行空" type="application/atom+xml">
   
@@ -150,235 +159,270 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Python学习总结（第四周）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Python学习总结（第四周）"><a href="#Python学习总结（第四周）" class="headerlink" title="Python学习总结（第四周）"></a>Python学习总结（第四周）</h2><p>这周我们主要学习了python办公自动化，下面是我画的一个思维导图。</p>
+<p><img src="C:\Users\YY\AppData\Roaming\Typora\typora-user-images\image-20210814113350281.png" alt="image-20210814113350281"></p>
+<p>这一周内容有点多，有些小知识我可能忘记画上去了，但主要内容都在的。下面是对上面导图内容的细化。因为这个星期学的都是实操，所以下面大部分都是直接上代码。</p>
+<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><p><img src="C:\Users\YY\AppData\Roaming\Typora\typora-user-images\image-20210814115520424.png" alt="image-20210814115520424"></p>
+<h4 id="读文件"><a href="#读文件" class="headerlink" title="读文件"></a>读文件</h4><p>读文件我们主要学习了两种方法，第一种：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开文件，file --&gt; 文件路径，mode --&gt; 打开方式，encoding -- &gt;编码类型</span></span><br><span class="line">file = <span class="built_in">open</span>(file=<span class="string">&#x27;resources/致橡树.txt&#x27;</span>, mode=<span class="string">&#x27;r&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="comment"># try  --&gt; 捕获异常</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 读取文件中的内容，默认读取所有内容，12 --&gt; 一次读12个字符</span></span><br><span class="line">    data = file.read(<span class="number">12</span>)</span><br><span class="line">    <span class="keyword">while</span> data:</span><br><span class="line">        <span class="built_in">print</span>(data)</span><br><span class="line">        data = file.read(<span class="number">12</span>)</span><br><span class="line"><span class="comment"># finally：总是执行代码</span></span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    <span class="comment"># 关闭文件</span></span><br><span class="line">    file.close()</span><br></pre></td></tr></table></figure>
+
+<p>使用上面的方法读取文件，在使用完文件之后，总是要手动关闭文件，释放资源，如果忘记关闭的话，会一直占用资源，会加大资源消耗。使用read读取数据时，如果读不到数据，read会返回None</p>
+<p>第二种，使用上下文语法with，进入和离开with的时候会自动执行某些操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;resources/致橡树.txt&#x27;</span>, mode=<span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    data = file.read(<span class="number">12</span>)</span><br><span class="line">    <span class="keyword">while</span> data:</span><br><span class="line">        <span class="built_in">print</span>(data)</span><br><span class="line">        data = file.read(<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
+
+<p>上面的写法在离开with时，会自动关闭文件，open()默认是读模式，当你只读一个文件的时候，可以不写mode。</p>
+<p>如果要读取二进制文件，把mode改成’rb‘即可，如果电脑的编码方式就是utf-8，encoding这个参数可以省略。</p>
+<p>在读取文件时，如果希望获得文件的字节数，可以先用seek方法将文件指针移动到文件末尾，然后通过tell方法获取文件指针移动的字节数，这个字节数就是文件的大小。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;resources/tmh.jpg&#x27;</span>, mode=<span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line"><span class="comment"># 2表示将文件指针移动到文件结尾，第一个参数0表示相对于某个位置的偏移量</span></span><br><span class="line">file.seek(<span class="number">0</span>, <span class="number">2</span>)</span><br><span class="line"><span class="comment"># 告诉我们指针移动到哪里</span></span><br><span class="line"><span class="built_in">print</span>(file.tell())</span><br><span class="line"><span class="comment"># 将指针移动到文件开头</span></span><br><span class="line">file.seek(<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    data = file.read(<span class="number">512</span>)</span><br><span class="line">    <span class="keyword">while</span> data:</span><br><span class="line">        <span class="built_in">print</span>(data)</span><br><span class="line">        data = file.data</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    file.close()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，设置的读取文件大小为512（2^9），读取二进制文件时，设置读取文件大小时，一般设置为2的n次方。</p>
+<h4 id="写文件"><a href="#写文件" class="headerlink" title="写文件"></a>写文件</h4><p>一. 写文本文件</p>
+<p>’w’表示写文件，如果文件不存，创建新文件，如果存在，就截断（使用‘w’模式打开一个文件时，原文件中的内容就已经全部清空了）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;resources/小雨康桥的诗.txt&#x27;</span>, mode=<span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    file.write(<span class="string">&#x27;我想做燕子\n&#x27;</span>)</span><br><span class="line">    file.write(<span class="string">&#x27;只需简单思想\n&#x27;</span>)</span><br><span class="line">    file.write(<span class="string">&#x27;只求风中流浪\n&#x27;</span>)</span><br><span class="line">    file.write(<span class="string">&#x27;我想作树\n&#x27;</span>)</span><br><span class="line">    file.write(<span class="string">&#x27;不长六腑五脏\n&#x27;</span>)</span><br><span class="line">    file.write(<span class="string">&#x27;不会寸断肝肠\n&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>操作模式‘a’表示创建新文件获将文件指针移动到原有文件的末尾再写入新内容，下面我们将上面的那首是补充完整。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;resources/&#x27;</span>小雨康桥的诗.txt<span class="string">&#x27;, mode=&#x27;</span>a<span class="string">&#x27;, encoding=&#x27;</span>utf-<span class="number">8</span><span class="string">&#x27;) as file:</span></span><br><span class="line"><span class="string">          filr.write(&#x27;</span>我做不成燕子\n<span class="string">&#x27;)</span></span><br><span class="line"><span class="string">          file.write(&#x27;</span>所以我飞不过感情的墙\n<span class="string">&#x27;)</span></span><br><span class="line"><span class="string">          file.write(&#x27;</span>我做不成树\n<span class="string">&#x27;)</span></span><br><span class="line"><span class="string">          file,write(&#x27;</span>因此也撑不破伤心的网\n<span class="string">&#x27;)</span></span><br></pre></td></tr></table></figure>
+
+<p>如果是写二进制的文件，使用操作模式’wb‘,但是一般不会写二进制文件，通常都是把一个二进制文件从一个文件写入另一个文件。</p>
+<h4 id="文件复制"><a href="#文件复制" class="headerlink" title="文件复制"></a>文件复制</h4><p>在这里，使用刚学习的内容可以实现复制文件的操作，在读文件的时候把读取到的内容写入一个新文件，这样就实现了文件的复制。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">file_copy</span>(<span class="params">source_file, target_file</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    文件复制</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    :param source_file:来源路径</span></span><br><span class="line"><span class="string">    :param target_file:保存路径</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">with</span>(source_file, mode=<span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> file1:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(target_file, mode=<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> file2:</span><br><span class="line">            data = file1.read(<span class="number">512</span>)</span><br><span class="line">            <span class="keyword">while</span> data:</span><br><span class="line">                file2.write(data)</span><br><span class="line">                data = file1.read(<span class="number">512</span>)</span><br><span class="line">                </span><br><span class="line">                </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    file_copy(<span class="string">&#x27;../tmh.jpg&#x27;</span>, <span class="string">&#x27;resources/tmh.jpg&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="读取csv文件"><a href="#读取csv文件" class="headerlink" title="读取csv文件"></a>读取csv文件</h4><p>csv文件也叫csv逗号分隔值文件，对于csv文件，python有专门的库可以操作，要操作csv文件时，导入csv库。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;resources/2018年北京积分落户数据.csv&#x27;</span>, mode=<span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    reader = csv.reader(file)</span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> reader:</span><br><span class="line">        <span class="comment"># 输出行号</span></span><br><span class="line">        <span class="built_in">print</span>(reader.line_num)</span><br><span class="line">        <span class="comment"># 输出行</span></span><br><span class="line">        <span class="built_in">print</span>(row)</span><br></pre></td></tr></table></figure>
+
+<p>在上面代码中，reader（）方法中默认使用逗号分割，可以使用参数delimiter设置分隔符，quotechar：去除包裹字符串的符号（默认去除英文的双引号）</p>
+<h4 id="写csv文件"><a href="#写csv文件" class="headerlink" title="写csv文件"></a>写csv文件</h4><p>以一个保存体温的文本文件为例，把体温数据写入csv文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;resources/temperature.txt&#x27;</span>, mode=<span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file1:</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;resources/temperature.csv&#x27;</span>, mode=<span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file2:</span><br><span class="line">        <span class="comment"># 读取第一行，得到一个字符串类型的数据</span></span><br><span class="line">        data = file1.readline()</span><br><span class="line">        writer = csv.writer(file)</span><br><span class="line">        writer.writerow([<span class="string">&#x27;ID&#x27;</span>, <span class="string">&#x27;temperature&#x27;</span>])</span><br><span class="line">        <span class="keyword">while</span> data:</span><br><span class="line">            <span class="comment"># 拆分字符串，得到病人的ID和温度，这里都是字符串类型的</span></span><br><span class="line">            x, y = data.split()</span><br><span class="line">            <span class="keyword">if</span> <span class="number">37.2</span> &lt; <span class="built_in">float</span>(y):</span><br><span class="line">                writer.writerow([x, <span class="string">f&#x27;<span class="subst">&#123;y&#125;</span>°C&#x27;</span>])</span><br><span class="line">            data = file1.readline()</span><br></pre></td></tr></table></figure>
+
+<p>上面代码在读取文件 的时候，同时把读取到的内容写入另外一个文件。</p>
+<h3 id="python操作Excel"><a href="#python操作Excel" class="headerlink" title="python操作Excel"></a>python操作Excel</h3><p>使用python操作Excel需要下载三方库，如果要操作低版本的Excel，需要下载三库：xlrd，xlwt，xlutils，这里要注意了，最新版本的xlrd库只能操作低版本的Excel，以前的xlrd可以兼容Excel文件。要处理新版Excel需要下载三方库：openpyxl。</p>
+<h4 id="datetime"><a href="#datetime" class="headerlink" title="datetime"></a>datetime</h4><p>python中的时间日期</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line">date1 = datetime(<span class="number">1990</span>, <span class="number">5</span>, <span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(date1)</span><br><span class="line">date2 = datetime(<span class="number">2008</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">13</span>, <span class="number">23</span>, <span class="number">45</span>)</span><br><span class="line"><span class="built_in">print</span>(date2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当前的时间</span></span><br><span class="line">date3 = datetime.now()</span><br><span class="line"><span class="built_in">print</span>(date3)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 两个日期相减会得到时间差对象</span></span><br><span class="line">delta = date3 - date2</span><br><span class="line"><span class="built_in">print</span>(delta, <span class="built_in">type</span>(delta))</span><br><span class="line"><span class="comment"># 获取两个日期相差的的天数和秒数</span></span><br><span class="line"><span class="built_in">print</span>(delta.days, delta.seconds)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 格式化时间日期</span></span><br><span class="line"><span class="built_in">print</span>(date2.strftime(<span class="string">&#x27;%H:%M:%S %Y年%m月%d日&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(date3.strftime(<span class="string">&#x27;%m月%d日%Y年 %H:%M:%S&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h4 id="xlrd库"><a href="#xlrd库" class="headerlink" title="xlrd库"></a>xlrd库</h4><p>xlrd库只能读取Excel文件，下面看代码吧，代码里面都有注释的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个工作簿对象  ---&gt; 一个Excel文件</span></span><br><span class="line">wb = xlrd.open_workbook(<span class="string">&#x27;resources/阿里巴巴2020年股票数据.xlsx&#x27;</span>)</span><br><span class="line"><span class="comment"># 获取所有工作表的名字</span></span><br><span class="line"><span class="built_in">print</span>(wb.sheet_names())</span><br><span class="line"><span class="comment"># 获取第一个工作表</span></span><br><span class="line">sheet = wb.sheet_by_index(<span class="number">0</span>)  <span class="comment"># type: xlrd.Worksheet</span></span><br><span class="line"><span class="built_in">print</span>(sheet, <span class="built_in">type</span>(sheet))</span><br><span class="line"><span class="comment"># 获取工作表行数</span></span><br><span class="line">rows = sheet.nrows()</span><br><span class="line"><span class="comment"># 获取工作表列数</span></span><br><span class="line">cols = sheet.ncols()</span><br><span class="line"><span class="built_in">print</span>(rows, cols)</span><br><span class="line"><span class="comment"># 获取工作表指定行</span></span><br><span class="line"><span class="built_in">print</span>(sheet.row(<span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(sheet.row_slice(<span class="number">0</span>, start_colx=<span class="number">0</span>, end_colx=<span class="number">5</span>))</span><br><span class="line"><span class="comment"># 获取工作表指定列</span></span><br><span class="line"><span class="built_in">print</span>(sheet.col(<span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span>(sheet.col_slice(<span class="number">1</span>,start_rowx=<span class="number">0</span>, end_rowx=<span class="number">10</span>))</span><br><span class="line"><span class="comment"># 获取单元格中的数据，cell单元格也是一个对象</span></span><br><span class="line"><span class="built_in">print</span>(sheet.cell(<span class="number">2</span>,<span class="number">2</span>).value)</span><br><span class="line"><span class="comment"># 遍历整个表单</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;交易日期\t\t\t最高价\t最低价\t开盘价\t收盘价\t成交量\t\t调整收盘价&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, sheet.nrows):</span><br><span class="line">    <span class="keyword">for</span> col inrange(sheet.ncols):</span><br><span class="line">        value = sheet.cell(row, col).value</span><br><span class="line">        <span class="keyword">if</span> col == <span class="number">0</span>:</span><br><span class="line">            <span class="comment"># 处理日期数据</span></span><br><span class="line">            curr_date = xlrd.xldate_as_datetime(value, <span class="number">0</span>)</span><br><span class="line">            <span class="comment"># 格式化输出日期</span></span><br><span class="line">            <span class="built_in">print</span>(curr_date.strftime(<span class="string">&#x27;%Y年%m月%d日&#x27;</span>), end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">        <span class="keyword">elif</span> col == <span class="number">5</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;<span class="built_in">int</span>(value):&lt;10d&#125;</span>&#x27;</span>, end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;value:&lt;<span class="number">.2</span>f&#125;</span>&#x27;</span>,end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>()               </span><br></pre></td></tr></table></figure>
+
+<h4 id="xlwt库"><a href="#xlwt库" class="headerlink" title="xlwt库"></a>xlwt库</h4><p>xlwt库只能用于写文件，下面一录入成绩为例。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第一步： 创建工作簿  ---&gt; Workbook</span></span><br><span class="line">wb = xlwt.Workbook()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第二步： 添加工作表（Worksheet）</span></span><br><span class="line">sheet = wb.add_sheet(<span class="string">&#x27;期末成绩&#x27;</span>)  <span class="comment"># type: xlwt.Worksheet</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调整单元格样式</span></span><br><span class="line"><span class="comment"># 调整颜色</span></span><br><span class="line">header_style = xlwt.XFStyle()</span><br><span class="line">pattern = xlwt.Pattern()</span><br><span class="line">pattern.pattern = xlwt.Pattern.SOLID_PATTERN</span><br><span class="line"><span class="comment"># pattern.pattern_fore_colour = xlwt.Style.colour_map[&#x27;blue&#x27;]</span></span><br><span class="line">pattern.pattern_fore_colour = <span class="number">6</span></span><br><span class="line">header_style.pattern = pattern</span><br><span class="line"><span class="comment"># 调整字体</span></span><br><span class="line">font = xlwt.Font()</span><br><span class="line">font.name = <span class="string">&#x27;楷体&#x27;</span></span><br><span class="line">font.height = <span class="number">20</span> * <span class="number">22</span></span><br><span class="line">font.bold = <span class="literal">True</span></span><br><span class="line">font.italic = <span class="literal">False</span></span><br><span class="line">font.colour_index = <span class="number">1</span></span><br><span class="line">header_style.font = font</span><br><span class="line"><span class="comment"># 对齐</span></span><br><span class="line">align = xlwt.Alignment()</span><br><span class="line">align.vert = xlwt.Alignment.VERT_BOTTOM</span><br><span class="line">align.horz = xlwt.Alignment.HORZ_GENERAL</span><br><span class="line">header_style.alignment = align</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第三步：向单元格写入数据</span></span><br><span class="line">title = [<span class="string">&#x27;姓名&#x27;</span>, <span class="string">&#x27;语文&#x27;</span>, <span class="string">&#x27;数学&#x27;</span>, <span class="string">&#x27;物理&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> i, temp <span class="keyword">in</span> <span class="built_in">enumerate</span>(title):</span><br><span class="line">    sheet.write(<span class="number">0</span>, i, temp, header_style)</span><br><span class="line"></span><br><span class="line">name = [<span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;关羽&#x27;</span>, <span class="string">&#x27;张飞&#x27;</span>, <span class="string">&#x27;马超&#x27;</span>, <span class="string">&#x27;貂蝉&#x27;</span>, <span class="string">&#x27;甄姬&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(name)):</span><br><span class="line">    sheet.write(row, <span class="number">0</span>, name[row])</span><br><span class="line">    <span class="keyword">for</span> col <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">4</span>):</span><br><span class="line">        sheet.write(row, col, random.randrange(<span class="number">50</span>, <span class="number">101</span>))</span><br><span class="line"><span class="comment"># 第四步：保存工作簿</span></span><br><span class="line">wb.save(<span class="string">&#x27;resources/一年级二班考试成绩.xls&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="xlutils库"><a href="#xlutils库" class="headerlink" title="xlutils库"></a>xlutils库</h4><p>对上面的数据进行汇总，就可以使用xlutils库.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"><span class="keyword">from</span> xlutils.copy <span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取Excel文件</span></span><br><span class="line">wb1 = xlrd.open_workbook(<span class="string">&#x27;resources/一年级二班考试成绩.xls&#x27;</span>)</span><br><span class="line"><span class="comment"># 复制</span></span><br><span class="line">wb2 = copy(wb1)  <span class="comment"># type: xlwt.Workbook</span></span><br><span class="line"><span class="comment"># 获取第一个表</span></span><br><span class="line">sheet = wb2.get_sheet(<span class="number">0</span>)</span><br><span class="line">sheet.write(<span class="number">0</span>, <span class="number">4</span>, <span class="string">&#x27;平均分&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> row_index <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">6</span>):</span><br><span class="line">    <span class="comment"># 计算平均分</span></span><br><span class="line">    sheet.write(row_index, <span class="number">4</span>, xlwt.Formula(<span class="string">f&#x27;average(B<span class="subst">&#123;row_index + <span class="number">1</span>&#125;</span>:D<span class="subst">&#123;row_index + <span class="number">1</span>&#125;</span>)&#x27;</span>))</span><br><span class="line">wb2.save(<span class="string">&#x27;resources/一年级二班考试成绩.xls&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>计算每一位同学的平均分，如果不使用xlutils库，那么就要先读取数据，在计算平均分，最后在写入表中，这是很麻烦的，直接使用三方库提供的copy函数将读取到的Excel文件转成workbook对象进行写操作，最后将计算平均分的公式写入单元格。</p>
+<h4 id="openpyxl库"><a href="#openpyxl库" class="headerlink" title="openpyxl库"></a>openpyxl库</h4><p>使用三方库openpyxl可以操作新版Excel文件，读写操作都是用一个三方库，不需要同上面一样分开读写，相比较而言，openpyxl操作更简单。</p>
+<p>使用openpyxl读取xlsx文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开一个工作簿 ---&gt; workbook</span></span><br><span class="line">wb = openpyxl.load_workbook(<span class="string">&#x27;resources/阿里巴巴2020年股票数据.xlsx&#x27;</span>)</span><br><span class="line"><span class="comment"># 获取工作表的名字</span></span><br><span class="line"><span class="built_in">print</span>(wb.sheetnames)</span><br><span class="line"><span class="comment"># 获取工作表(第一个工作表)</span></span><br><span class="line">sheet = wb.worksheets[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(sheet))</span><br><span class="line"><span class="comment"># 获取行数和列数</span></span><br><span class="line"><span class="built_in">print</span>(sheet.max_row, sheet.max_column)</span><br><span class="line"><span class="comment"># 获取维度</span></span><br><span class="line"><span class="built_in">print</span>(sheet.dimensions)</span><br><span class="line"><span class="comment"># 获取单元格的数据</span></span><br><span class="line"><span class="built_in">print</span>(sheet[<span class="string">&#x27;A3&#x27;</span>].value)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 循环遍历所有单元格</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, sheet.max_row + <span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> col <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, sheet.max_column + <span class="number">1</span>):</span><br><span class="line">        value = sheet.cell(row, col).value</span><br><span class="line">        <span class="keyword">if</span> col == <span class="number">1</span>:</span><br><span class="line">            <span class="built_in">print</span>(value.strftime(<span class="string">&#x27;%Y年%m月%d日&#x27;</span>), end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">        <span class="keyword">elif</span> col == <span class="number">6</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;<span class="built_in">int</span>(value):&lt;10d&#125;</span>&#x27;</span>, end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;value:<span class="number">.2</span>f&#125;</span>&#x27;</span>, end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="comment"># 循环遍历所有单元格</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> sheet.iter_rows(min_row=<span class="number">2</span>):</span><br><span class="line">    <span class="keyword">for</span> cell <span class="keyword">in</span> row:</span><br><span class="line">        value = cell.value</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(value) == datetime.datetime:</span><br><span class="line">            <span class="built_in">print</span>(value.strftime(<span class="string">&#x27;%Y年%m月%d日&#x27;</span>), end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">        <span class="keyword">elif</span> <span class="built_in">type</span>(value) == <span class="built_in">float</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;value:<span class="number">.2</span>f&#125;</span>&#x27;</span>, end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;value&#125;</span>&#x27;</span>, end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：上面的方法max_row()获取最大行数，如果Excel文件结尾还有大量空行的话，也会被计算进去，如果需要取值的话，最好进行判断。</p>
+<p>写Excel文件（xlsx）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第一步： 创建工作簿  ---&gt; Workbook</span></span><br><span class="line">wb = openpyxl.Workbook()</span><br><span class="line"></span><br><span class="line">sheet = wb.active</span><br><span class="line">sheet.title = <span class="string">&#x27;期末成绩&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 第三步：向单元格写入数据</span></span><br><span class="line">title = [<span class="string">&#x27;姓名&#x27;</span>, <span class="string">&#x27;语文&#x27;</span>, <span class="string">&#x27;数学&#x27;</span>, <span class="string">&#x27;物理&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> i, temp <span class="keyword">in</span> <span class="built_in">enumerate</span>(title):</span><br><span class="line">    sheet.cell(<span class="number">1</span>, i + <span class="number">1</span>, temp)</span><br><span class="line"></span><br><span class="line">name = [<span class="string">&#x27;关羽&#x27;</span>, <span class="string">&#x27;张飞&#x27;</span>, <span class="string">&#x27;马超&#x27;</span>, <span class="string">&#x27;貂蝉&#x27;</span>, <span class="string">&#x27;甄姬&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(name)):</span><br><span class="line">    sheet.cell(row + <span class="number">2</span>, <span class="number">1</span>, name[row])</span><br><span class="line">    <span class="keyword">for</span> col <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="number">5</span>):</span><br><span class="line">        sheet.cell(row + <span class="number">2</span>, col, random.randrange(<span class="number">50</span>, <span class="number">101</span>))</span><br><span class="line"><span class="comment"># 第四部：保存工作簿</span></span><br><span class="line">wb.save(<span class="string">&#x27;resources/一年级二班考试成绩.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>读写xlsx文件,在openpyxl库中有设置样式的模块，使用时，直接导入</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"><span class="keyword">from</span> openpyxl.styles <span class="keyword">import</span> Font, Alignment</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更改字体</span></span><br><span class="line">font = Font(size=<span class="number">18</span>, bold=<span class="literal">True</span>, color=<span class="string">&#x27;bbffff&#x27;</span>)</span><br><span class="line"><span class="comment"># 设置对齐方式</span></span><br><span class="line">alignment = Alignment(horizontal=<span class="string">&#x27;center&#x27;</span>, vertical=<span class="string">&#x27;center&#x27;</span>)</span><br><span class="line"></span><br><span class="line">wb = openpyxl.load_workbook(<span class="string">&#x27;resources/一年级二班考试成绩.xlsx&#x27;</span>)</span><br><span class="line">sheet = wb.worksheets[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 设置行高和列宽</span></span><br><span class="line">sheet.row_dimensions[<span class="number">1</span>].height = <span class="number">30</span></span><br><span class="line">sheet.column_dimensions[<span class="string">&#x27;E&#x27;</span>].width = <span class="number">120</span></span><br><span class="line"></span><br><span class="line">sheet[<span class="string">&#x27;E1&#x27;</span>] = <span class="string">&#x27;平均分&#x27;</span></span><br><span class="line">sheet.cell(<span class="number">1</span>, <span class="number">5</span>).alignment = alignment</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="number">7</span>):</span><br><span class="line">    <span class="comment"># 计算平均分</span></span><br><span class="line">    sheet[<span class="string">f&#x27;E<span class="subst">&#123;i&#125;</span>&#x27;</span>] = <span class="string">f&#x27;=average(B<span class="subst">&#123;i&#125;</span>:D<span class="subst">&#123;i&#125;</span>)&#x27;</span></span><br><span class="line">    sheet.cell(i, <span class="number">5</span>).font = font</span><br><span class="line">    sheet.cell(i, <span class="number">5</span>).alignment = alignment</span><br><span class="line">wb.save(<span class="string">&#x27;resources/一年级二班考试成绩.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>以上就是操作Excel文件的做常用的一些方法，都是一些需要记忆的，实操性 很强，不需要太多理解就可以实现办公自动化。</p>
+<h3 id="python操作Word文档"><a href="#python操作Word文档" class="headerlink" title="python操作Word文档"></a>python操作Word文档</h3><p>首先要安装三方库python-docx，python操作Word文档和上面差不多，都是实操性的，只需要调用方法就好，下面看代码吧</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> docx <span class="keyword">import</span> Document</span><br><span class="line"><span class="keyword">from</span> docx.shared <span class="keyword">import</span> Cm, Pt</span><br><span class="line"><span class="keyword">from</span> docx.document <span class="keyword">import</span> Document <span class="keyword">as</span> Doc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建对象</span></span><br><span class="line">document = Document()  <span class="comment"># type: Doc</span></span><br><span class="line"><span class="comment"># 添加文档标题标题，0：大标题</span></span><br><span class="line">document.add_heading(<span class="string">&#x27;快快乐乐学pyhton&#x27;</span>, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加段落，返回段落对象</span></span><br><span class="line">p = document.add_paragraph(<span class="string">&#x27;python是一门非常流行的编程语言，它 &#x27;</span>)</span><br><span class="line"><span class="comment"># 添加小段落，设置样式</span></span><br><span class="line">run = p.add_run(<span class="string">&#x27;简单&#x27;</span>)</span><br><span class="line">run.bold = <span class="literal">True</span></span><br><span class="line">run.font.size = Pt(<span class="number">22</span>)</span><br><span class="line">p.add_run(<span class="string">&#x27; 而且 &#x27;</span>)</span><br><span class="line">run = p.add_run(<span class="string">&#x27;优雅&#x27;</span>)</span><br><span class="line">run.italic = <span class="literal">True</span></span><br><span class="line">run.font.size = Pt(<span class="number">22</span>)</span><br><span class="line">p.add_run(<span class="string">&#x27;。&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加标题，1：一级标题</span></span><br><span class="line">document.add_heading(<span class="string">&#x27;Heading, level 1&#x27;</span>, level=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 添加段落，设置样式</span></span><br><span class="line">document.add_paragraph(<span class="string">&#x27;Intense quote&#x27;</span>, style=<span class="string">&#x27;Intense Quote&#x27;</span>)</span><br><span class="line"></span><br><span class="line">document.add_paragraph(</span><br><span class="line">    <span class="string">&#x27;first item in unordered list&#x27;</span>, style=<span class="string">&#x27;List Bullet&#x27;</span></span><br><span class="line">)</span><br><span class="line">document.add_paragraph(</span><br><span class="line">    <span class="string">&#x27;first item in ordered list&#x27;</span>, style=<span class="string">&#x27;List Number&#x27;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加图片，设置宽度</span></span><br><span class="line">document.add_picture(<span class="string">&#x27;resources/tianmaohai.jpg&#x27;</span>, width=Cm(<span class="number">9</span>), height=Cm(<span class="number">9</span>))</span><br><span class="line"></span><br><span class="line">records = (</span><br><span class="line">    (<span class="string">&#x27;关羽&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;Spam&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;赵云&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;Eggs&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;周瑜&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;Spam, spam, eggs, and spam&#x27;</span>)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加一行三列的表格</span></span><br><span class="line">table = document.add_table(rows=<span class="number">1</span>, cols=<span class="number">3</span>)</span><br><span class="line"><span class="comment"># 获取表格第一行单元格</span></span><br><span class="line">hdr_cells = table.rows[<span class="number">0</span>].cells</span><br><span class="line">hdr_cells[<span class="number">0</span>].text = <span class="string">&#x27;Qty&#x27;</span></span><br><span class="line">hdr_cells[<span class="number">1</span>].text = <span class="string">&#x27;Id&#x27;</span></span><br><span class="line">hdr_cells[<span class="number">2</span>].text = <span class="string">&#x27;Desc&#x27;</span></span><br><span class="line"><span class="keyword">for</span> qty, <span class="built_in">id</span>, desc <span class="keyword">in</span> records:</span><br><span class="line">    <span class="comment"># 添加一行单元格</span></span><br><span class="line">    row_cells = table.add_row().cells</span><br><span class="line">    <span class="comment"># 单元格添加元素</span></span><br><span class="line">    row_cells[<span class="number">0</span>].text = qty</span><br><span class="line">    row_cells[<span class="number">1</span>].text = <span class="built_in">id</span></span><br><span class="line">    row_cells[<span class="number">2</span>].text = desc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加分页符</span></span><br><span class="line">document.add_page_break()</span><br><span class="line"></span><br><span class="line">document.save(<span class="string">&#x27;resources/demo.docx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>根据上述代码可以创建出一个demo.docx文档，如下所示：</p>
+<p><img src="C:\Users\YY\AppData\Roaming\Typora\typora-user-images\image-20210815130238900.png" alt="image-20210815130238900"></p>
+<p>如果有一个已经创建好的文档，你需要替换其中的一段文本，可以使用字符串中的方法replace替换。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> docx <span class="keyword">import</span> Document</span><br><span class="line"><span class="keyword">from</span> docx.document <span class="keyword">import</span> Document <span class="keyword">as</span> Doc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读Word文档</span></span><br><span class="line">doc = Document(<span class="string">&#x27;resources/离职证明.docx&#x27;</span>)  <span class="comment"># type: Doc</span></span><br><span class="line"><span class="comment"># 循环遍历所有段落</span></span><br><span class="line"><span class="keyword">for</span> i, p <span class="keyword">in</span> <span class="built_in">enumerate</span>(doc.paragraphs):</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;周杰&#x27;</span> <span class="keyword">in</span> p.text:</span><br><span class="line">        <span class="keyword">for</span> run <span class="keyword">in</span> p.runs:</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&#x27;周杰&#x27;</span> <span class="keyword">in</span> run.text</span><br><span class="line">                <span class="comment"># 替换</span></span><br><span class="line">                run.text = run.text.replace(<span class="string">&#x27;周杰&#x27;</span>, <span class="string">&#x27;周杰伦&#x27;</span>)</span><br><span class="line">doc.save(<span class="string">&#x27;resources/离职证明.docx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>在工作中有大量重复工作时，可以使用python来解决，只需要写一段代码，以后的工作就可以得到简化，python操作Word文档的一些基本常用方法就写到这里，如果以后需要用到，还可以在官网中查找。</p>
+<h3 id="自动发邮件、短信"><a href="#自动发邮件、短信" class="headerlink" title="自动发邮件、短信"></a>自动发邮件、短信</h3><p>想要实现自动发邮件，首先我们要有一个自己的邮箱，如果还是用QQ邮箱发消息的，最好换一个邮箱，QQ邮箱安全性并不高。这里我用的是126的邮箱，在实现自动发邮件之前，首先要在设置中找到POP3/SMTP服务，把这个服务开启，<strong>注意：</strong>当你不用时，一定要把这个功能关闭，以免授权码泄露，被别人盗用身份。下面，我们直接上代码吧！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">from</span> email.header <span class="keyword">import</span> Header</span><br><span class="line"><span class="keyword">from</span> email.mime.multipart <span class="keyword">import</span> MIMEMultipart</span><br><span class="line"><span class="keyword">from</span> email.mime.text <span class="keyword">import</span> MIMEText</span><br><span class="line"><span class="keyword">from</span> urllib.parse <span class="keyword">import</span> quote</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_attach</span>(<span class="params">path, filename</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;设置附件内容&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">f&#x27;<span class="subst">&#123;path&#125;</span>/<span class="subst">&#123;filename&#125;</span>&#x27;</span>, mode=<span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">        <span class="comment"># 创建一个附件对象</span></span><br><span class="line">        attachment = MIMEText(file.read(), <span class="string">&#x27;base64&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">        <span class="comment"># 设置附件中以什么形式发送（二进制）</span></span><br><span class="line">        attachment[<span class="string">&#x27;content-type&#x27;</span>] = <span class="string">&#x27;application/octet-stream&#x27;</span></span><br><span class="line">        <span class="comment"># 设置在邮件中显示的名字</span></span><br><span class="line">        filename = quote(filename)</span><br><span class="line">        attachment[<span class="string">&#x27;content-disposition&#x27;</span>] = <span class="string">f&#x27;attachment; filename=<span class="subst">&#123;filename&#125;</span>&#x27;</span></span><br><span class="line">        <span class="comment"># 返回附件对象</span></span><br><span class="line">        <span class="keyword">return</span> attachment</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个邮件对象</span></span><br><span class="line">email = MIMEMultipart()</span><br><span class="line"><span class="comment"># 发件人</span></span><br><span class="line">email[<span class="string">&#x27;From&#x27;</span>] = <span class="string">&#x27;发件人&#x27;</span></span><br><span class="line"><span class="comment"># 收件人</span></span><br><span class="line">email[<span class="string">&#x27;To&#x27;</span>] = <span class="string">&#x27;收件人&#x27;</span></span><br><span class="line"><span class="comment"># 邮件标题</span></span><br><span class="line">email[<span class="string">&#x27;Subject&#x27;</span>] = Header(<span class="string">&#x27;你需要的离职证明已开出&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="comment"># 邮件正文内容</span></span><br><span class="line">content = <span class="string">&quot;&quot;&quot;兹证明神里，身份证号码：122223200010111089，</span></span><br><span class="line"><span class="string">于2019年3月12日至2021年9月10日在我单位研发部部门担任Java工程开发师职务，</span></span><br><span class="line"><span class="string">在职期间无不良表现。因个人原因，于2021年9月10日起终止解除劳动合同。</span></span><br><span class="line"><span class="string">现已结清财务相关费用，办理完解除劳动关系相关手续，双方不存在任何劳动争议。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">特此证明！&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 添加邮件正文内容</span></span><br><span class="line">email.attach(MIMEText(content, <span class="string">&#x27;plain&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line"><span class="comment"># 添加一个附件</span></span><br><span class="line">email.attach(get_attach(<span class="string">&#x27;resources&#x27;</span>, <span class="string">&#x27;胡桃离职证明.docx&#x27;</span>))</span><br><span class="line"><span class="comment"># 再添加一个附件</span></span><br><span class="line">email.attach(get_attach(<span class="string">&#x27;resources&#x27;</span>, <span class="string">&#x27;tianmaohai.jpg&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建对象SMTP_SSL(连接邮件服务器)</span></span><br><span class="line">smtp_obj = smtplib.SMTP_SSL(<span class="string">&#x27;smtp.126.com&#x27;</span>, <span class="number">465</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过用户名和授权码进行登陆</span></span><br><span class="line">smtp_obj.login(<span class="string">&#x27;youxiangzhanghao&#x27;</span>, <span class="string">&#x27;shouquanma&#x27;</span>)</span><br><span class="line"><span class="comment"># 发送邮件(发件人，收件人，邮件内容)</span></span><br><span class="line">smtp_obj.sendmail(<span class="string">&#x27;发件人&#x27;</span>, [<span class="string">&#x27;收件人&#x27;</span>], email.as_string())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>附件中的文件名，如果要设置成中文名的话，一定要先转成百分号编码传输，英文可以不用转，为了保险起见，最好都是统一转成百分号编码。</p>
+<p>自动发短信也是比较实现的，你需要在短信平台注册一个账号，注册之后你会有一个身份码，这个在发短信时要用到，你还需要知道收件人的电话号码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send_message</span>(<span class="params">tel, message</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;发送短信（调用平台网关）&quot;&quot;&quot;</span></span><br><span class="line">    resp = requests.post(</span><br><span class="line">        url=<span class="string">&#x27;短信平台&#x27;</span>,</span><br><span class="line">        auth=(<span class="string">&#x27;api&#x27;</span>, <span class="string">&#x27;身份码&#x27;</span>),</span><br><span class="line">        data=&#123;</span><br><span class="line">            <span class="string">&#x27;mobile&#x27;</span>: tel,</span><br><span class="line">            <span class="string">&#x27;message&#x27;</span>: message</span><br><span class="line">        &#125;,</span><br><span class="line">        timeout=<span class="number">10</span>,</span><br><span class="line">        verify=<span class="literal">False</span></span><br><span class="line">    )</span><br><span class="line">    <span class="keyword">return</span> resp.json()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    message = <span class="string">&#x27;好好学习，天天向上【Python小课】&#x27;</span></span><br><span class="line">    tel = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入电话号码：&#x27;</span>))</span><br><span class="line">    <span class="built_in">print</span>(send_message(tel, message))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在你发送的消息里面需要有一个标签，使用中文的【】括起来，需要你自己在平台申请，通过审核之后就可以使用了。</p>
+<h3 id="python操作PDF文件"><a href="#python操作PDF文件" class="headerlink" title="python操作PDF文件"></a>python操作PDF文件</h3><p>这还是很简单的，只需要跟着步骤走就行了，直接上代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PyPDF2</span><br><span class="line"><span class="keyword">from</span> PyPDF2.pdf <span class="keyword">import</span> PageObject</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建对象读PDF文件</span></span><br><span class="line">reader = PyPDF2.PdfFileReader(<span class="string">&#x27;resources/XGBoost.pdf&#x27;</span>)</span><br><span class="line"><span class="comment"># 创建对象，写PDF</span></span><br><span class="line">writer = PyPDF2.PdfFileWriter()</span><br><span class="line"><span class="comment"># 获取PDF的页数，根据页码读取内容</span></span><br><span class="line"><span class="keyword">for</span> page_num <span class="keyword">in</span> <span class="built_in">range</span>(reader.numPages):</span><br><span class="line">    <span class="comment"># 获取对应页码的内容</span></span><br><span class="line">    current_page = reader.getPage(page_num)  <span class="comment"># type: PageObject</span></span><br><span class="line">    <span class="comment"># 从页面中抽取文字</span></span><br><span class="line">    <span class="comment"># current_page.extractText()</span></span><br><span class="line">    <span class="comment"># 把页面正向旋转90</span></span><br><span class="line">    current_page.rotateClockwise(<span class="number">90</span>)</span><br><span class="line">    <span class="comment"># 把取出来的页面写进writer</span></span><br><span class="line">    writer.addPage(current_page)</span><br><span class="line">    <span class="comment"># 添加空白页</span></span><br><span class="line">    writer.addBlankPage()</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;resources/XGBoost-modified.pdf&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    writer.write(file)</span><br></pre></td></tr></table></figure>
+
+<p>上面代码在读文件的同时，把读到的内容写在了新文件里，以页为单位读和写。想要实现的功能，只需要调用方法，还是很简便的。我们在写pdf时，还可以给文件加密，加密过后的文件，如果别人想要访问，那么必要要输入密码才行，加密可以使用encrypt()。我们对上面的PDF文件进行加密。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">reader = PyPDF2.PdfFileReader(<span class="string">&#x27;resources/XGBoost.pdf&#x27;</span>)</span><br><span class="line">writer = PyPDF2.PdfFileWriter()</span><br><span class="line"><span class="keyword">for</span> page_num <span class="keyword">in</span> <span class="built_in">range</span>(reader.numPages):</span><br><span class="line">    writer.addPage(reader.getPage(page_num))</span><br><span class="line"><span class="comment"># 给文件加密</span></span><br><span class="line">writer.encrypt(<span class="string">&#x27;guozhu&#x27;</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;resources/XGBoost-encrypt.pdf&#x27;</span>, mode=<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    writer.write(file)</span><br></pre></td></tr></table></figure>
+
+<p>有加密，那么就有解密，如果我们想要解密，可以使用decrypt()方法，可以尝试暴力解密，把所有能组成密码的组合都尝试一下。</p>
+<p>通常我们阅读的pdf文件都是加了水印的，一般加水印都是为了防止别人盗用，python也可以对PDF文件加水印，加水印相当于把两页PDF合并在一起，可以使用mergePage()方法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PyPDF2</span><br><span class="line"><span class="keyword">from</span> PyPDF2.pdf <span class="keyword">import</span> PageObject</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读文件</span></span><br><span class="line">reader1 = PyPDF2.PdfFileReader(<span class="string">&#x27;resources/XGBoost.pdf&#x27;</span>)</span><br><span class="line">reader2 = PyPDF2.PdfFileReader(<span class="string">&#x27;resources/watermark.pdf&#x27;</span>)</span><br><span class="line"><span class="comment"># 写文件</span></span><br><span class="line">writer = PyPDF2.PdfFileWriter()</span><br><span class="line"></span><br><span class="line">watermark_page = reader2.getPage(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">for</span> page_num <span class="keyword">in</span> <span class="built_in">range</span>(reader1.numPages):</span><br><span class="line">    current_page = reader1.getPage(page_num)  <span class="comment"># type: PageObject</span></span><br><span class="line">    <span class="comment"># 把两页PDF文件合并在一起</span></span><br><span class="line">    current_page.mergePage(watermark_page)</span><br><span class="line">    writer.addPage(current_page)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;resources/XGBoost-watermark.pdf&#x27;</span>, mode=<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    writer.write(file)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>PDF的读写操作，常用的基本就是上述这些，就是加水印，加密。</p>
+<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><p>正则表达式（Regular Expression）通常被用来检索、替换那些符合某个模式(规则)的文本。正则表达式是对字符串（包括普通字符（例如，a 到 z 之间的字母）和特殊字符（称为“元字符”））操作的一种逻辑公式，是非常灵活的，功能性极强的。</p>
+<p>对于刚学正则表达式的人来说，它是非常晦涩难懂的，虽然它很强大，但是很难学懂。</p>
+<p>下面是一些常用的表达式</p>
+<p><img src="C:\Users\YY\AppData\Roaming\Typora\typora-user-images\image-20210815140547009.png" alt="image-20210815140547009"></p>
+<p>在python中使用正则表达式的两种情况：</p>
+<ol>
+<li>不创建正则表达式对象，直接调用函数进行匹配操作。</li>
+<li>创建正则表达式对象（Pattern），通过给对象发消息实现匹配操作</li>
+</ol>
+<p>通过网站注册，检测用户名是否合法来实现两种方式的匹配操作，用户名必须是数字、字母、下划线，长度在6-20个字符。</p>
+<p>方式一：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">username = <span class="built_in">input</span>(<span class="string">&#x27;请输入用户名：&#x27;</span>)</span><br><span class="line"><span class="comment"># match不完全匹配</span></span><br><span class="line">matcher = re.match(<span class="string">r&#x27;^\w+&#123;6,20&#125;$&#x27;</span>, username)</span><br><span class="line"><span class="comment"># fullmatch完全匹配</span></span><br><span class="line"><span class="comment"># matcher = re.fullmatch(r&#x27;\w+&#123;6, 10&#125;&#x27;, username)</span></span><br><span class="line"><span class="keyword">if</span> matcher <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;用户名不合法&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(matcher)</span><br><span class="line">    <span class="comment"># 返回匹配的值</span></span><br><span class="line">    <span class="built_in">print</span>(matcher.group())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>方式二：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">username = <span class="built_in">input</span>(<span class="string">&#x27;请输入用户名：&#x27;</span>)</span><br><span class="line"><span class="comment"># 创建一个表达式对象</span></span><br><span class="line">pattern = re.<span class="built_in">compile</span>(<span class="string">r&#x27;^\w+&#123;6, 20&#125;$&#x27;</span>)</span><br><span class="line"><span class="comment"># 给对象发消息，匹配</span></span><br><span class="line">matcher = pattern.match(username)</span><br><span class="line"><span class="keyword">if</span> matcher <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;用户名不合法&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(matcher.group())</span><br></pre></td></tr></table></figure>
+
+<p>如果我们要在一段文本里提取某些信息，我们可以使用search搜索。比如说’报警电话：110，我们班是Python-2105班，我的qq号是321213312，我的手机号码是13932801293，谢谢！‘我们要提取这段文字中的数字，这时我们可以使用search搜索。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">content = <span class="string">&quot;&quot;&quot;报警电话：110，我们班是Python-2105班，</span></span><br><span class="line"><span class="string">我的QQ号是2831264，我的手机号是18934313424，谢谢！&quot;&quot;&quot;</span></span><br><span class="line">pattern = re.<span class="built_in">compile</span>(<span class="string">r&#x27;\d+&#x27;</span>)</span><br><span class="line"><span class="comment"># 搜索文本中所有的数字</span></span><br><span class="line">matcher = pattern.search(content)</span><br><span class="line"><span class="keyword">while</span> matcher:</span><br><span class="line">    <span class="built_in">print</span>(matcher.group())</span><br><span class="line">    matcher = pattern.search(content,matcher.end())</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 匹配表达式中所有匹配的值</span></span><br><span class="line">results = re.findall(<span class="string">r&#x27;\d+&#x27;</span>, content)</span><br><span class="line"><span class="keyword">for</span> result <span class="keyword">in</span> results:</span><br><span class="line">    <span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+<p>从网上获取新闻标题和链接</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re </span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment"># 量词后面加？号，表示贪婪匹配，尽可能短的匹配</span></span><br><span class="line">pattern re.<span class="built_in">compile</span>(<span class="string">r&#x27;href=&quot;http://.+?&quot;)                  </span></span><br><span class="line"><span class="string">resq = requests(&#x27;</span>http://www.sohu.com/<span class="string">&#x27;)</span></span><br><span class="line"><span class="string">content = resq.text</span></span><br><span class="line"><span class="string">matcher =pattrn.search(content)</span></span><br><span class="line"><span class="string"># 获取网页链接                  </span></span><br><span class="line"><span class="string">while matcher:</span></span><br><span class="line"><span class="string">    print(matcher.group()[6:-1])</span></span><br><span class="line"><span class="string">    matcher = pattern.search(content, matcher.end())</span></span><br><span class="line"><span class="string"># 获取标题</span></span><br><span class="line"><span class="string">pattern1 = re.compile(r&#x27;</span>title=<span class="string">&quot;.+?&quot;</span><span class="string">&#x27;)</span></span><br><span class="line"><span class="string">matcher1 = pattern.search(content)</span></span><br><span class="line"><span class="string">while matcher:</span></span><br><span class="line"><span class="string">    print(matcher.group()[6:-1])</span></span><br><span class="line"><span class="string">    matcher = pattern.search(content, matcher.end())                   </span></span><br></pre></td></tr></table></figure>
+
+<p>正则表达式捕获组</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">resq = requests.get(<span class="string">&#x27;http://www.sohu.com/&#x27;</span>)</span><br><span class="line"><span class="comment"># 捕获组操作，匹配整段，但值捕获（）中的内容</span></span><br><span class="line">pattern = re.<span class="built_in">compile</span>(<span class="string">r&#x27;&lt;a\s.*?href=&quot;(.+?)&quot;.*?title=&quot;(.+?)&quot;.*?&gt;&#x27;</span>)</span><br><span class="line">results = pattern.findall(resq.text)</span><br><span class="line"><span class="keyword">for</span> href, title <span class="keyword">in</span> results:</span><br><span class="line">    <span class="built_in">print</span>(title)</span><br><span class="line">    <span class="keyword">if</span> href.startswith(<span class="string">&#x27;http://www.sohu.com/&#x27;</span>):</span><br><span class="line">        href = <span class="string">&#x27;http://www.sohu.com/&#x27;</span> + href</span><br><span class="line">    <span class="built_in">print</span>(href)</span><br></pre></td></tr></table></figure>
+
+<p>过滤不良内容</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">content = <span class="string">&#x27;马化腾是个傻逼，fuck you!&#x27;</span></span><br><span class="line"><span class="comment"># flags=re.I表示忽略大小写</span></span><br><span class="line"><span class="comment"># modified_content = re.sub(&#x27;[傻沙煞][逼屌雕笔]|马化腾|fuck|shit&#x27;, &#x27;*&#x27;, content, flags=re.I)</span></span><br><span class="line">pattern = re.<span class="built_in">compile</span>(<span class="string">r&#x27;[傻沙煞][逼屌雕笔]|马化腾|fuck|shit&#x27;</span>, flags=re.I)</span><br><span class="line">modified_content = pattern.sub(<span class="string">&#x27;*&#x27;</span>, content)</span><br><span class="line"><span class="built_in">print</span>(modified_content)</span><br></pre></td></tr></table></figure>
+
+<p>正则表达式拆分字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">poem = <span class="string">&#x27;床前明月光，疑似地上霜。举头望明月，低头思故乡。&#x27;</span></span><br><span class="line"><span class="comment"># 方法一</span></span><br><span class="line"><span class="comment"># pattern = re.compile(r&#x27;[，。]&#x27;)</span></span><br><span class="line"><span class="comment"># sentence_list = pattern.split(poem)</span></span><br><span class="line"><span class="comment"># print(sentence_list)</span></span><br><span class="line"><span class="comment"># sentence_list = [sentence for sentence in sentence_list if sentence]</span></span><br><span class="line"><span class="comment"># print(sentence_list)</span></span><br><span class="line"><span class="comment"># 方法二</span></span><br><span class="line">sentence_list = re.split(<span class="string">r&#x27;[，。]&#x27;</span>, poem)</span><br><span class="line"><span class="built_in">print</span>(sentence_list)</span><br><span class="line">sentence_list = [sentence <span class="keyword">for</span> sentence <span class="keyword">in</span> sentence_list <span class="keyword">if</span> sentence]</span><br><span class="line"><span class="built_in">print</span>(sentence_list)</span><br></pre></td></tr></table></figure>
+
+<p>以上就是这一个星期的内容，除了最后一节内容正则表达式之外，其他的内容都是实操性的，不烧脑，好上手。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80(%E4%BA%8C)/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.408Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E5%9B%9B%E5%91%A8%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E5%88%97%E8%A1%A8%E7%9A%84%E6%8E%92%E5%BA%8F%E5%92%8C%E5%8F%8D%E8%BD%AC/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.398Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.388Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%94%E5%91%A8%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%B8%89%E5%91%A8%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.368Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%94%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.338Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E5%9B%9B%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%B8%89%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.268Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.228Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%BA%8C%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.169Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.169Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -402,8 +446,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

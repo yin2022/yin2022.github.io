@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | YY行空</title>
+  <title>YY行空</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="学习Python第03天经过了一周的学习，我们从认识python开始学习，到目前为止，了解了python的历史、优点、安装、交互式环境（通过在终端进行输入操作，操作被执行后，通过窗口输出结果），学习了3种如何运行代码的方式：  打开Windows的“命令提示符”工具，输入python然后回车，会进入到python的交互式环境。  安装IPython，使用python的包管理工具pip安装：pip">
+<meta property="og:type" content="article">
 <meta property="og:title" content="YY行空">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2021/09/11/Python%E5%AD%A6%E4%B9%A003%E5%A4%A9%EF%BC%88%E7%AC%AC%E4%B8%80%E5%91%A8%E6%80%BB%E7%BB%93%EF%BC%89/index.html">
 <meta property="og:site_name" content="YY行空">
+<meta property="og:description" content="学习Python第03天经过了一周的学习，我们从认识python开始学习，到目前为止，了解了python的历史、优点、安装、交互式环境（通过在终端进行输入操作，操作被执行后，通过窗口输出结果），学习了3种如何运行代码的方式：  打开Windows的“命令提示符”工具，输入python然后回车，会进入到python的交互式环境。  安装IPython，使用python的包管理工具pip安装：pip">
 <meta property="og:locale">
+<meta property="article:published_time" content="2021-09-11T09:24:14.138Z">
+<meta property="article:modified_time" content="2021-07-24T05:55:44.019Z">
 <meta property="article:author" content="YinYu">
 <meta name="twitter:card" content="summary">
   
@@ -150,235 +154,238 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Python学习03天（第一周总结）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="学习Python第03天"><a href="#学习Python第03天" class="headerlink" title="学习Python第03天"></a>学习Python第03天</h2><p>经过了一周的学习，我们从认识python开始学习，到目前为止，了解了python的历史、优点、安装、<strong>交互式环境</strong>（通过在终端进行输入操作，操作被执行后，通过窗口输出结果），学习了3种如何运行代码的方式：</p>
+<ol>
+<li><p>打开Windows的“命令提示符”工具，输入python然后回车，会进入到python的交互式环境。</p>
+</li>
+<li><p>安装IPython，使用python的包管理工具pip安装：pip install ipython 。下载安装之后，输入ipython启动，然后就可以进入交互式环境了。</p>
+</li>
+<li><p>安装PyCharm（集成开发环境）：PyCharm是一个更专业的开发工具，适用于商业项目的开发，对于刚开始学习python的人来说，下载社区版已经足够使用了。</p>
+<p>当我们安装好运行python程序所需的环境之后，我们就可以开始接下来的python编程之路了。</p>
+</li>
+</ol>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>首先，我们要先知道什么是<strong>变量，变量就是数据的载体</strong>。变量是一个用来保存数据的内存空间，可以被读取和修改。每一个变量都有一种数据类型，在这一周里，我们学习了一些常用的数据类型：</p>
+<ul>
+<li>整型（int）：表示任意大小的整数，同时支持二进制（bin），八进制（oct），十六进制（hex）。</li>
+<li>浮点型（float）：也叫浮点数，表示小数。</li>
+<li>字符型（str）：用一对单引号或者双引号括起来的任意文本。</li>
+<li>布尔型（bool）：只有True、False两种值。非空字符串转成布尔类型对应的值都是True，反之，是False。</li>
+</ul>
+<h3 id="变量的命名"><a href="#变量的命名" class="headerlink" title="变量的命名"></a>变量的命名</h3><p>每一个变量都有一个名字，变量的命名需要遵守一定的规则：</p>
+<ol>
+<li>字母（Unicode字符）、数据、下划线，不能使用特殊字符，数字不能开头</li>
+<li>变量名区分大小写（大小写敏感）</li>
+<li>不能使用python中的关键字（有特殊含义的单词）和保留字（已经使用过的名字）</li>
+<li>见名知意（看到变量名就知道它代表了什么意思）</li>
+<li>变量名使用全小写，多个单词使用下划线连接（Snake case）</li>
+</ol>
+<h3 id="变量的使用"><a href="#变量的使用" class="headerlink" title="变量的使用"></a>变量的使用</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a1 = <span class="number">123</span></span><br><span class="line">b1 = <span class="number">34</span></span><br><span class="line"><span class="built_in">print</span>(a1 + b1)</span><br><span class="line"><span class="built_in">print</span>(a1 - b1)</span><br><span class="line"><span class="built_in">print</span>(a1 * b1)</span><br><span class="line"><span class="built_in">print</span>(a1 // b1)   <span class="comment"># 整除</span></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="comment"># 157</span></span><br><span class="line"><span class="comment"># 89</span></span><br><span class="line"><span class="comment"># 4182</span></span><br><span class="line"><span class="comment"># 3</span></span><br></pre></td></tr></table></figure>
+<h3 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h3><p>格式化输出可以控制输出结果的格式，按照你设定的格式进行输出。这里主要学习了两种常用的方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">123</span></span><br><span class="line">y = <span class="number">23</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%d + %d = %d&#x27;</span> % (x, y, x + y))  <span class="comment"># %d整型占位符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%f + %f = %f&#x27;</span> % (x, y ,x - y))  <span class="comment"># %f浮点型占位符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%.2f * %.2f = %.2f&#x27;</span> % (x, y, x * y) <span class="comment"># .2表示占两个位置</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x&#125;</span> + <span class="subst">&#123;y&#125;</span> = <span class="subst">&#123;x + y:<span class="number">.2</span>f&#125;</span>&#x27;</span>)  <span class="comment"># :.2表示占两个位置</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x&#125;</span> - <span class="subst">&#123;y&#125;</span> = <span class="subst">&#123;x - y:<span class="number">.2</span>f&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">赋值运算符</td>
+<td align="center">=</td>
+</tr>
+<tr>
+<td align="center">算术运算符</td>
+<td align="center">+  -  *  //  /  %  **(求幂)</td>
+</tr>
+<tr>
+<td align="center">复合运算符</td>
+<td align="center">+=  -=  !=   %=  /=  *=</td>
+</tr>
+<tr>
+<td align="center">关系运算符</td>
+<td align="center">&gt;=  &lt;=  !=  ==</td>
+</tr>
+<tr>
+<td align="center">逻辑运算符</td>
+<td align="center">and or not(and和or有短路功能)</td>
+</tr>
+</tbody></table>
+<h3 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h3><p>在日常生活中，每天都会做选择，比如吃饭，当你的大脑向你发出饥饿信号，这时候你会根据显示情况判断目前去不去吃饭，当然，一般情况下，都会选择去吃饭，在去吃饭时，你又会去选择吃什么。而在编程时，也是这样，当你需要判断一个问题再做选择时，就会使用分支结构，一个分支结构下可以嵌套使用另一个分支，<strong>为了保持代码可读性，嵌套层次不应太深。分支结构按照一定条件选择执行的路径，</strong>并不是按照物理顺序执行。</p>
+<h4 id="if语句的使用"><a href="#if语句的使用" class="headerlink" title="if语句的使用"></a>if语句的使用</h4><p>在构造分支结构时，可以使用if、elif、else关键字，在使用时，if和elif后面要跟条件和冒号，else后只需要跟冒号。if可以单独使用，但是elif和else不能单独使用。当有多个判断条件时，可以使用多分支结构if…elif…elif….。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">username = <span class="built_in">input</span>(<span class="string">&#x27;用户名：&#x27;</span>)</span><br><span class="line">password = <span class="built_in">input</span>(<span class="string">&#x27;密码：&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> username == <span class="string">&#x27;admin&#x27;</span> <span class="keyword">and</span> password == <span class="string">&#x27;Admin123&#x27;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;登录成功！&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;用户名或密码错误！登陆失败！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>使用多分支结构实现分段函数求值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;x = &#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> x &gt; <span class="number">1</span>:</span><br><span class="line">    y = <span class="number">3</span> * x - <span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> x &gt;= -<span class="number">1</span>:</span><br><span class="line">    y = x + <span class="number">2</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    y = <span class="number">5</span> * x + <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x&#125;</span>对应的y值:<span class="subst">&#123;y&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><p>当我们需要重复执行某个动作时，这时候我们可以使用循环来实现这个动作。循环结构就是程序中需要反复执行某个功能而设置的一种程序结构。python中，我们学习构造循环的两种做法：for-in循环和while循环。</p>
+<h4 id="for-in循环"><a href="#for-in循环" class="headerlink" title="for-in循环"></a>for-in循环</h4><p>当我们事先知道循环次数时，可以使用for-in循环，当循环次数达到指定次数时，就会结束循环。例如1-100之间的数求和。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">total = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">101</span>):</span><br><span class="line">    total += i</span><br><span class="line"><span class="built_in">print</span>(total)</span><br></pre></td></tr></table></figure>
+
+<p>首先定义一个total用来储存求和的值，使用for循环对1-100之间的值依次相加，得到的值赋给total，依次累加，直到加到100为止。</p>
+<blockquote>
+<p><em><strong>说明：</strong></em>range（1，101）用来构造以一个1-100的范围，每次循环可以得到一个变量i。range（1，101）是一个左闭右开的区间，取不到101，只能从1开始取值，一直取到100。range（）可以增加一个步长，例如：</p>
+<p>range（1，101，2），表示间隔两个，取一个值，前面取出来的就是1-100之间的奇数。</p>
+</blockquote>
+<h4 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h4><p>当你事先不知道循环次数时，可以使用while循环，当是使用while循环时，要设置一个可以结束循环的条件，如果不知道条件时，可以使用一个死循环，当达到想要的结果时，使用break结束循环。例如猜数游戏：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">num = random.randrange(<span class="number">1</span>,<span class="number">100</span>)</span><br><span class="line">count = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    count += <span class="number">1</span></span><br><span class="line">    guess = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;guess = &#x27;</span>))</span><br><span class="line">    <span class="keyword">if</span> num &gt; guess:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;小了,请重新输入：&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> num &lt; guess:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;大了，请重新输入：&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;恭喜你猜对了！&#x27;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> count == <span class="number">7</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;您的智商余额不足&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><em><strong>说明：</strong></em>使用break可以终止当前循环，它不可以终止自身所在循环之外的循环。</p>
+</blockquote>
+<h4 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h4><p>循环是可以嵌套使用的，可以在循环结构里层再构造一个循环结构，当然和分支结构一样，循环不能嵌套太深，不然会影响代码可读性，当循环嵌套太深，还有可能会影响代码性能，不方便后期维护。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打印九九乘法表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>):   <span class="comment"># 控制行输出</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i + <span class="number">1</span>):   <span class="comment"># 控制列输出</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;j&#125;</span> x <span class="subst">&#123;i&#125;</span> =  <span class="subst">&#123;j * i&#125;</span>&#x27;</span>,end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+<h4 id="分支、循环应用例子"><a href="#分支、循环应用例子" class="headerlink" title="分支、循环应用例子"></a>分支、循环应用例子</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 寻找两个数的最大公约数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 辗转相除法</span></span><br><span class="line">x = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;x = &#x27;</span>))</span><br><span class="line">y = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;y = &#x27;</span>))</span><br><span class="line"><span class="keyword">while</span> x % y != <span class="number">0</span>:</span><br><span class="line">    x , y = x % y, x</span><br><span class="line"><span class="built_in">print</span>(y)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 寻找100-999之间的水仙花数</span></span><br><span class="line"></span><br><span class="line">l, mid, r = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>,<span class="number">1000</span>):</span><br><span class="line">    l = i // <span class="number">100</span></span><br><span class="line">    mid = i // <span class="number">10</span> % <span class="number">10</span></span><br><span class="line">    r = i % <span class="number">10</span></span><br><span class="line">    <span class="keyword">if</span> i == l ** <span class="number">3</span> + mid ** <span class="number">3</span> + r ** <span class="number">3</span>:</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 找出1-100之间所有的质数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">100</span>):</span><br><span class="line">    flag = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n):</span><br><span class="line">        <span class="keyword">if</span> n % i == <span class="number">0</span>：</span><br><span class="line">            flag = <span class="literal">False</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> flag:</span><br><span class="line">        <span class="built_in">print</span>(n,end=<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>第一周的学习，我们学到的都是python最基本的知识，当然，只有把基础学习好了，学熟了，以后的学习才不至于听不懂。学习是一个积累的过程，刚开始学习时，感觉很吃力是正常的，这时候我们要多多练习代码，把讲过的题目拿出来多复习复习。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80(%E4%BA%8C)/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.408Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/09/11/Python%E5%AD%A6%E4%B9%A003%E5%A4%A9%EF%BC%88%E7%AC%AC%E4%B8%80%E5%91%A8%E6%80%BB%E7%BB%93%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E5%88%97%E8%A1%A8%E7%9A%84%E6%8E%92%E5%BA%8F%E5%92%8C%E5%8F%8D%E8%BD%AC/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.398Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.388Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E7%AC%AC04%E5%A4%A9/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/09/11/68-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%9C%E4%B8%9A/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.368Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%94%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.338Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E5%9B%9B%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%B8%89%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.268Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.228Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%BA%8C%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.169Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.169Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -402,8 +409,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

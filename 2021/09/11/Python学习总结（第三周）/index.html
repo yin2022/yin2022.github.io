@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | YY行空</title>
+  <title>YY行空</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Python学习总结（第三周）下面是我总结的这一周的学习内容大纲，我是按照自己的理解来整理的。  根据整理出的学习内容，再来详细总结一下这周的学习情况。 函数初识函数我认为程序中的函数和数学函数是相同的概念，给出一个自变量，得到一个因变量，在一段代码块中，给一个自变量，经过一系列操作得到一个因变量。 定义一个函数使用关键字def后面跟一个函数名加括号，不要忘了括号后面还有冒号，函数名的命名方法和变">
+<meta property="og:type" content="article">
 <meta property="og:title" content="YY行空">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%B8%89%E5%91%A8%EF%BC%89/index.html">
 <meta property="og:site_name" content="YY行空">
+<meta property="og:description" content="Python学习总结（第三周）下面是我总结的这一周的学习内容大纲，我是按照自己的理解来整理的。  根据整理出的学习内容，再来详细总结一下这周的学习情况。 函数初识函数我认为程序中的函数和数学函数是相同的概念，给出一个自变量，得到一个因变量，在一段代码块中，给一个自变量，经过一系列操作得到一个因变量。 定义一个函数使用关键字def后面跟一个函数名加括号，不要忘了括号后面还有冒号，函数名的命名方法和变">
 <meta property="og:locale">
+<meta property="og:image" content="c:/Users/YY/AppData/Roaming/Typora/typora-user-images/image-20210807115439389.png">
+<meta property="article:published_time" content="2021-09-11T09:24:14.268Z">
+<meta property="article:modified_time" content="2021-08-07T09:45:49.714Z">
 <meta property="article:author" content="YinYu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/YY/AppData/Roaming/Typora/typora-user-images/image-20210807115439389.png">
   
     <link rel="alternative" href="/atom.xml" title="YY行空" type="application/atom+xml">
   
@@ -150,235 +156,274 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Python学习总结（第三周）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Python学习总结（第三周）"><a href="#Python学习总结（第三周）" class="headerlink" title="Python学习总结（第三周）"></a>Python学习总结（第三周）</h2><p>下面是我总结的这一周的学习内容大纲，我是按照自己的理解来整理的。</p>
+<p><img src="C:\Users\YY\AppData\Roaming\Typora\typora-user-images\image-20210807115439389.png" alt="image-20210807115439389"></p>
+<p>根据整理出的学习内容，再来详细总结一下这周的学习情况。</p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="初识函数"><a href="#初识函数" class="headerlink" title="初识函数"></a>初识函数</h4><p>我认为程序中的函数和数学函数是相同的概念，给出一个自变量，得到一个因变量，在一段代码块中，给一个自变量，经过一系列操作得到一个因变量。</p>
+<p>定义一个函数使用关键字def后面跟一个函数名加括号，不要忘了括号后面还有冒号，函数名的命名方法和变量的命名是一致的。</p>
+<h4 id="函数的变量"><a href="#函数的变量" class="headerlink" title="函数的变量"></a>函数的变量</h4><p><strong>局部变量：</strong>局部变量就是定义在函数内部的变量，它的作用域只在当前函数中，如果在函数外使用它，会出现NameError错误。局部变量当函数执行完之后就会被释放掉。</p>
+<p><strong>全局变量</strong>：全局变量就是没有写在任何函数里面的变量，它的作用于全局。在定义的函数中也可以使用。如果你在函数中想要声明一个全局变量，或者把局部变量放到全局作用域，那么可以使用关键字global声明。在嵌套函数中，如果不想使用局部变量，可以使用关键字nonlocal声明使用嵌套作用域的变量。在python中，搜索一个变量是按照LEGB顺序进行搜索的，Local（局部作用域）—&gt; Embeded（嵌套作用域）—&gt; Global(全局作用域)—&gt; Built-in(内置作用域)。</p>
+<h4 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h4><p>在声明函数时，在函数名后有一个括号，这个括号就是放置参数的，在放参数时，可以为参数设置一个默认值，也可以不设置，如果设置了默认值，在调用函数传参时，就可以不传参过来，函数就会使用设置好的默认值。</p>
+<p><strong>位置参数</strong>：设置参数时，写在*号前面的是位置参数，位置参数在传参时只需要对号入座即可。</p>
+<p><strong>命名关键字参数</strong>：写在*号后面的参数是命名关键字参数，在传参时，必须使用‘参数名=值’的形式，如果不使用这个形式会出现语法错误SyntaxError。位置参数在使用时也可以加上参数名。如果函数中同时存在位置参数和关键字参数，那么关键字参数必须在位置参数后面。</p>
+<p><strong>可变参数：</strong>当在设置参数时，如果不确定要设置参数的数量时，就可以使用可变参数，在参数前加上*号，代表可变参数。可变参数在传参时可以接收0个或任意多个参数，会把参数打包成元组，在使用时，可以使用前面学习的元组里面的方法。一般可变参数使用 *args表示。可变参数前再加一个 *号表示可以接收0个或任意多个关键字参数，会把所有关键字参数打包成字典，一般使用 **kwargs表示。</p>
+<h4 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h4><p>一个py文件就是一个模块，在编程中，如果我们要使用到以前编写的函数，那么我们可以在当前文件中导入模块。在导入模块时，有两种情况：一是在相同文件夹下，一个是在不同文件夹下。</p>
+<p>在同一文件下：</p>
+<ul>
+<li><p>直接使用import加模块名导入，在调用函数时，使用‘模块名.函数名’的形式调用。</p>
+</li>
+<li><p>使用‘from 模块名 import 函数名’的方式导入，直接使用函数名调用。</p>
+</li>
+</ul>
+<p>不在同一文件下：</p>
+<ul>
+<li><p>使用import 包名.模块名导入，使用‘包名.模块名.函数名’调用</p>
+</li>
+<li><p>使用from 包名.模块名 import 函数名导入，使用函数名调用</p>
+</li>
+</ul>
+<p>在from导入函数时，不同的包中可能会存在函数名相同的函数，但是函数的实现不一样，如果直接使用函数名调用，这时就会出现不知道调用那个函数的情况，我们可以使用as对函数进行别名，或者使用完全限定名，[包名.]模块名.函数名，解决函数名冲突的问题。在python中from，import，as就是专门用来处理包和模块导入操作的。</p>
+<h3 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h3><p>在python中，一下几种情况称为高阶函数：函数可以作为函数的参数；函数可以作为函数的返回值；函数可以赋值给变量。在写函数时要遵守高内聚低耦合的原则，高阶函数可以解耦合，实现高内聚。</p>
+<h4 id="冒泡排序进阶版"><a href="#冒泡排序进阶版" class="headerlink" title="冒泡排序进阶版"></a>冒泡排序进阶版</h4><p>在前面课程中我们就已经学过冒泡排序和折半查找，但不是用函数写的，这里，我们使用函数来封装这个算法，如果以后要使用，可以直接调用。不过在写函数时，我们不能对原数据产生影响。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">homework01 - 冒泡排序</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author：YinYu</span></span><br><span class="line"><span class="string">Date：2021/8/7</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bubble_sort</span>(<span class="params">items, *， gt=<span class="keyword">lambda</span> x, y: x &gt; y, ascending=<span class="literal">False</span></span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    冒泡排序</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    :param items:一个待排序列表</span></span><br><span class="line"><span class="string">    :param gt:排序规则</span></span><br><span class="line"><span class="string">    :param ascending:排升序还是降序</span></span><br><span class="line"><span class="string">    :return: 返回排序后的列表</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    items = items[:]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(items) - <span class="number">1</span>):</span><br><span class="line">        flag = <span class="literal">False</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(items) - i):</span><br><span class="line">            <span class="keyword">if</span> gt(items[j], items[j + <span class="number">1</span>]):</span><br><span class="line">                items[j], items[j + <span class="number">1</span>] = items[j + <span class="number">1</span>], items[j]</span><br><span class="line">                flag = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> flag:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> ascending:</span><br><span class="line">        items = items[::-<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">return</span> items</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    nums1 = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">17</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">5</span>]</span><br><span class="line">    nums2 = [<span class="number">9</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>]</span><br><span class="line">    words = [<span class="string">&#x27;Go&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>, <span class="string">&#x27;Python&#x27;</span>, <span class="string">&#x27;C++&#x27;</span>]</span><br><span class="line">    <span class="built_in">print</span>(bubble_sort(nums1))</span><br><span class="line">    <span class="built_in">print</span>(bubble_sort(nums2))</span><br><span class="line">    <span class="built_in">print</span>(bubble_sort(words, gt=<span class="keyword">lambda</span> x, y: <span class="built_in">len</span>(x) &gt; <span class="built_in">len</span>(y)))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="comment"># [1, 2, 2, 3, 3, 5, 6, 7, 9, 17]</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的函数就是一个高阶函数，把函数当做函数的参数。lambda没有函数名，而且一句话就能写完，冒号后面的表达式就是返回值。折半查找前面已经写过很多次了，这里我就没有写了。</p>
+<h4 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h4><p>我自己是觉得递归有点难理解，简单的说，就是函数自己调用自己的过程就叫递归，但是要实现递归，还要有递归出口才行，就是当满足一定条件的时候，就返回。每次调用函数都是分为三个步骤：保存现场，调用函数，恢复现场。每个函数都有自己的栈结构，保存现场就是将整个栈结构保存起来，在递归的过程中，不停地调用自己，就是一直在重复前两个步骤，保存现场（将函数栈结构存入另一个栈中），调用函数，最先调用的函数保存在栈的最底层，当满足一定条件的时候，就开始出栈，出栈相当于一个回溯的过程，这也就是恢复现场。官方的CPython默认情况下，调用栈的大小是1000次，内存中只有一小部分属于栈空间，通常只有512k或者1M。一个函数在调用自己或其他函数时，一定要快速收敛，不然会出现RecursionError错误。递归存在的问题：效率低下，有大量重复运算。</p>
+<p><strong>汉诺塔</strong>：汉诺塔的玩法大家应该都知道了，把圆盘从A柱子上移到C柱子上，当只有两个圆盘的时候，移动步骤是：A –&gt; B,A –&gt; C, B –&gt; C.首先把最小的移到B柱，再把大的移到C柱，最后把小的从B柱移到C柱上，如果把它抽象成一个宏观的问题，假如有N个圆盘，要把N个圆盘移到C柱上，首先，我们假设A柱上前N-1个圆盘是一个整体，这样就把圆盘分为了两个部分N和N-1，根据上面的步骤，我们只需要把N-1移到B柱，再把A移到C柱上，最大把N-1移到C柱，那么就完成了这个过程。根据我自己的理解，和查到的一些资料，请看以下代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">homework02 - 汉诺塔</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author:YinYu</span></span><br><span class="line"><span class="string">Date:2021/8/7</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">num, A, B, C</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    汉诺塔</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    :param num:圆盘数量</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> num == <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">print</span>(A,<span class="string">&#x27;---&gt;&#x27;</span>,C)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        hanoi(num - <span class="number">1</span>, A, C, B)</span><br><span class="line">        hanoi(<span class="number">1</span>, A, B, C)</span><br><span class="line">        hanoi(num - <span class="number">1</span>, B, A, C)</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">hanoi(<span class="number">5</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line">A ---&gt; B</span><br><span class="line">A ---&gt; C</span><br><span class="line">B ---&gt; C</span><br><span class="line">A ---&gt; B</span><br><span class="line">C ---&gt; A</span><br><span class="line">C ---&gt; B</span><br><span class="line">A ---&gt; B</span><br><span class="line">A ---&gt; C</span><br><span class="line">B ---&gt; C</span><br><span class="line">B ---&gt; A</span><br><span class="line">C ---&gt; A</span><br><span class="line">B ---&gt; C</span><br><span class="line">A ---&gt; B</span><br><span class="line">A ---&gt; C</span><br><span class="line">B ---&gt; C</span><br><span class="line"><span class="literal">None</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>小孩爬楼梯</strong>：它的题目是，10台阶梯，一个小孩，一次可以走一台，可以走两台，也可以走三台，问这十台阶梯有几种方法可以走完。这里我先找出来他走1-5台阶梯对应有几种方法。</p>
+<ul>
+<li><p>1台阶梯—–&gt; 1种</p>
+</li>
+<li><p>2台阶梯—–&gt; 2种</p>
+</li>
+<li><p>3台阶梯—–&gt; 4种</p>
+</li>
+<li><p>4台阶梯—–&gt; 7种</p>
+</li>
+<li><p>5台阶梯 —–&gt; 13种</p>
+</li>
+</ul>
+<p>从上面可以看出，从第四台阶梯开始，第四台阶梯的走法等于前面三个走法之和。那么我们就可以宏观的认为，当你走n台阶梯时，它的走法等于n-1台的走法加上n-2 台的走法加上n-3台的走法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">homework03 - 小孩爬楼梯</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author:YinYu</span></span><br><span class="line"><span class="string">Date:2021/8/7</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">climb_stairs</span>(<span class="params">num</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    小孩爬楼梯</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    :param num:台阶数</span></span><br><span class="line"><span class="string">    :return:返回方法数目</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    n_dict = &#123;<span class="number">1</span>: <span class="number">1</span>, <span class="number">2</span>: <span class="number">2</span>, <span class="number">3</span>: <span class="number">4</span>&#125;</span><br><span class="line">    <span class="keyword">if</span> num <span class="keyword">in</span> n_dict:</span><br><span class="line">        reruen n_dict[num]</span><br><span class="line">    <span class="keyword">return</span> climb_stairs(num - <span class="number">1</span>) + climb_stairs(num - <span class="number">2</span>) + climb_stairs(num - <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(climb_stairs(<span class="number">4</span>))</span><br><span class="line"><span class="built_in">print</span>(climb_stairs(<span class="number">5</span>))</span><br><span class="line"><span class="built_in">print</span>(climb_stairs(<span class="number">10</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#输出</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">13</span></span><br><span class="line"><span class="number">274</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h3><p><strong>对象：</strong>对象是接收消息的实体，对象=数据+函数（方法），对象将数据和操作数据的函数从逻辑上变成了一个整体。每个对象都有自己的属性和行为。</p>
+<p><strong>类：</strong>类就是将一大类对象的共同特征（静态特征和动态特征）抽取出来之后得到的一个抽象概念。简单地说，类是对象的蓝图（模板），有了类才能够创建出这种类型的对象，所以说，对象一定是属于某个类的。</p>
+<p><strong>面向对象编程：</strong>面向对象编程就是通过给对象发消息达到解决问题的目标</p>
+<p>面向对象编程三大步：</p>
+<ol>
+<li><p>定义类：</p>
+<p>​              数据抽象：找到和对象相关的静态特征（属性）–&gt; 找名词</p>
+</li>
+</ol>
+<p>​                     行为抽象：找到和对象相关的动态特征（方法）–&gt; 找动词</p>
+<ol start="2">
+<li><p>创造对象：使用构造器语法创建一个对象，类名（…）</p>
+</li>
+<li><p>发消息：就是调方法，对象名.方法名（…）</p>
+</li>
+</ol>
+<h4 id="使用面向对象编程"><a href="#使用面向对象编程" class="headerlink" title="使用面向对象编程"></a>使用面向对象编程</h4><p>建泳池：有一个圆形的泳池，不确定半径，要在泳池边修建一圈宽1米的走道，走道边上修围墙，围墙是58.5元每米，走道是38.5元每平方米，问建泳池一共需要多少钱。</p>
+<p>首先定义一个类，泳池是由两个同心圆组成，可以抽象出一个圆的类，它的属性有半径，方法：计算面积。周长</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">example01 - 使用面向对象编程</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author: YinYu</span></span><br><span class="line"><span class="string">Date: 2021/8/7</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;圆形&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, radius</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;圆的属性&quot;&quot;&quot;</span></span><br><span class="line">        self.radius = radius</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">area</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        求面积</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        :return: 返回圆的面积</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> self.radius * math.pi * self.radius</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">perimeter</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        求周长</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        :return: 返回圆的周长</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * self.radius * math.pi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    r = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;r = &#x27;</span>))</span><br><span class="line">    circle1 = Circle(r)</span><br><span class="line">    circle2 = Circle(r + <span class="number">3</span>)</span><br><span class="line">    <span class="comment"># print(f&#x27;过道资金：&#123;(circle2.area() - circle1.area()) * 58.5:.2f&#125;&#x27;)</span></span><br><span class="line">    <span class="comment"># print(f&#x27;围墙资金：&#123;circle2.perimeter() * 38.5:.2f&#125;&#x27;)</span></span><br><span class="line">    fence_price = circle2.perimeter() * <span class="number">38.5</span></span><br><span class="line">    aisle_price = (circle2.area() - circle1.area()) * <span class="number">58.5</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;围墙的造价：<span class="subst">&#123;fence_price:<span class="number">.2</span>f&#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;过道的造价：<span class="subst">&#123;aisle_price:<span class="number">.2</span>f&#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;全部的造价：<span class="subst">&#123;aisle_price + fence_price:<span class="number">.2</span>f&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>时钟，它的属性有小时，分钟，秒，行为，显示，走字。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">example04 - 创建一个时钟对象（可以显示时/分/秒），让它运转起来（走字）</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author: YinYu</span></span><br><span class="line"><span class="string">Date: 2021/8/5</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Clock</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;时钟&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, hours=<span class="number">0</span>, minutes=<span class="number">0</span>, seconds=<span class="number">0</span></span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :param hours: 小时</span></span><br><span class="line"><span class="string">        :param minutes: 分钟</span></span><br><span class="line"><span class="string">        :param seconds: 秒数</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        self.hours = hours</span><br><span class="line">        self.minutes = minutes</span><br><span class="line">        self.seconds = seconds</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cyclometer</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;走字&quot;&quot;&quot;</span></span><br><span class="line">        self.seconds += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> self.seconds == <span class="number">60</span>:</span><br><span class="line">            self.seconds = <span class="number">0</span></span><br><span class="line">            self.minutes += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> self.minutes == <span class="number">60</span>:</span><br><span class="line">                self.minutes = <span class="number">0</span></span><br><span class="line">                self.hours += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> self.hours == <span class="number">24</span>:</span><br><span class="line">                    self.hours = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">show</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :return:  返回时间</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&#x27;<span class="subst">&#123;self.hours:<span class="number">0</span>&gt;2d&#125;</span>:<span class="subst">&#123;self.minutes:<span class="number">0</span>&gt;2d&#125;</span>:<span class="subst">&#123;self.seconds:<span class="number">0</span>&gt;2d&#125;</span>&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    clock1 = Clock(<span class="number">23</span>, <span class="number">59</span>, <span class="number">58</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">50</span>):</span><br><span class="line">        os.system(<span class="string">&#x27;cls&#x27;</span>)</span><br><span class="line">        clock1.cyclometer()</span><br><span class="line">        time.sleep(<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(clock1.show())</span><br></pre></td></tr></table></figure>
+
+<p>这里使用了一个清屏的方法，所以要在终端里运行这个程序。这样时间就会走起来。</p>
+<h4 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h4><p>我们在类里面写的函数，通常称之为方法，它们基本上都是发给对象的消息。但是有时候，我们的消息并不想发给对象，而是希望发给这个类（类本身也是一个对象），这个时候我们可以使用静态方法或类方法(装饰器)</p>
+<p>静态方法：@staticmethod</p>
+<p>类方法：@classmethod</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">example02 - 三角形</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author:YinYu</span></span><br><span class="line"><span class="string">Date:2021/8/7</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Triangle</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;三角形&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">is_triangle</span>(<span class="params">a, b, c</span>):</span></span><br><span class="line">        <span class="keyword">return</span> a + b &gt; c <span class="keyword">and</span> a + c &gt; b <span class="keyword">and</span> b + c &gt; a</span><br><span class="line"></span><br><span class="line">    <span class="comment"># @classmethod</span></span><br><span class="line">    <span class="comment"># def is_triangle(cls, a, b, c):</span></span><br><span class="line">    <span class="comment">#     return a + b &gt; c and a + c &gt; b and b + c &gt; a</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, a, b, c</span>):</span></span><br><span class="line">        self.a = a</span><br><span class="line">        self.b = b</span><br><span class="line">        self.c = c</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">perimeter</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;求三角形周长&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> self.a + self.b + self.c</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">area</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;求三角形面积&quot;&quot;&quot;</span></span><br><span class="line">        p = self.perimeter() / <span class="number">2</span></span><br><span class="line">        <span class="keyword">return</span> (p * (p - self.a) * (p - self.b) * (p - self.c)) ** <span class="number">0.5</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    x, y, z = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>(<span class="string">&#x27;请输入三角形的三边边长：&#x27;</span>).split())</span><br><span class="line">    <span class="comment"># 调用静态方法判断是否能构成三角形</span></span><br><span class="line">    <span class="keyword">if</span> Triangle.is_triangle(x, y, z):</span><br><span class="line">        triangle = Triangle(x, y, z)</span><br><span class="line">        <span class="built_in">print</span>(triangle.perimeter())</span><br><span class="line">        <span class="built_in">print</span>(triangle.area())</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;不能构成三角形&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>魔法方法：</strong>上面代码中，我用到了____name____,和____init____,这种形式的方法叫魔法方法或者魔术方法</p>
+<table>
+<thead>
+<tr>
+<th align="center">魔术方法</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong><strong>name</strong></strong></td>
+<td align="center">在当前文件中，代表‘____main____’,当别人调用时，它代表当前的文件名。</td>
+</tr>
+<tr>
+<td align="center"><strong><strong>init</strong></strong></td>
+<td align="center">在调用构造器语法创建对象时，自动初始化属性</td>
+</tr>
+<tr>
+<td align="center"><strong><strong>repr</strong></strong></td>
+<td align="center">获得对象的字符串表示,把对象放到容器中调用print输出时会自动调用</td>
+</tr>
+<tr>
+<td align="center"><strong><strong>str</strong></strong></td>
+<td align="center">获得对象的字符串表示，在使用print方法输出对象时会被自动调用</td>
+</tr>
+<tr>
+<td align="center"><strong><strong>lt</strong></strong></td>
+<td align="center">使用&lt;比较大小的时候会自动调用</td>
+</tr>
+</tbody></table>
+<p><strong>枚举</strong>：如果一个变量的取值只有有限个选项，可以考虑使用枚举类型，在python中没有定义枚举类型的语法，但是可以通过继承Enum类来实现枚举。想要使用这个类就要先导入模块enum。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">example03 - 创建一个牌类</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author:YinYu</span></span><br><span class="line"><span class="string">Date:2012/8/7</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Suite</span>(<span class="params">Enum</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;牌的四种花色&quot;&quot;&quot;</span></span><br><span class="line">    SPADE, HEART, CLUB, DIAMOND = <span class="built_in">range</span>(<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Card</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;牌&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, suite, face</span>):</span></span><br><span class="line">        self.suite = suite</span><br><span class="line">        self.face = face</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">show</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;显示牌&quot;&quot;&quot;</span></span><br><span class="line">        suites = [<span class="string">&#x27;♥&#x27;</span>, <span class="string">&#x27;♠&#x27;</span>, <span class="string">&#x27;♣&#x27;</span>, <span class="string">&#x27;♦&#x27;</span>]</span><br><span class="line">        faces = [<span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;5&#x27;</span>, <span class="string">&#x27;6&#x27;</span>, <span class="string">&#x27;7&#x27;</span>, <span class="string">&#x27;8&#x27;</span>, <span class="string">&#x27;9&#x27;</span>, <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;J&#x27;</span>, <span class="string">&#x27;Q&#x27;</span>, <span class="string">&#x27;K&#x27;</span>]</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&#x27;<span class="subst">&#123;suites[self.suite.value]&#125;</span><span class="subst">&#123;faces[self.face]&#125;</span>&#x27;</span></span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;获得对象的字符串表示,输出时自动调用&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> self.show()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;获得对象的字符串表示，把对象放到容器中&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> self.show()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__lt__</span>(<span class="params">self, other</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.face &lt; other.face</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    card = Card(Suite.SPADE, <span class="number">1</span>)</span><br><span class="line">    <span class="built_in">print</span>(card)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">homework03 - 创建一个扑克类（无大王，小王）</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author: YinYu</span></span><br><span class="line"><span class="string">Date: 2021/8/6</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">from</span> homework02 <span class="keyword">import</span> Card, Suite</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Poker</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;扑克&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.cards = [Card(suite, face)</span><br><span class="line">                      <span class="keyword">for</span> suite <span class="keyword">in</span> [Suite.SPADE, Suite.HEART, Suite.CLUB, Suite.DIAMOND]</span><br><span class="line">                      <span class="keyword">for</span> face <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">14</span>)]</span><br><span class="line">        self.counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shuffle</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;洗牌&quot;&quot;&quot;</span></span><br><span class="line">        self.counter = <span class="number">0</span></span><br><span class="line">        random.shuffle(self.cards)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">deal</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;发牌&quot;&quot;&quot;</span></span><br><span class="line">        card = self.cards[self.counter]</span><br><span class="line">        self.counter += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> card</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">has_more</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;是否还有牌&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> self.counter &lt; <span class="built_in">len</span>(self.cards)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    poker = Poker()</span><br><span class="line">    poker.shuffle()</span><br><span class="line">    <span class="built_in">print</span>(poker.cards)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;陈玲的牌：&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">13</span>):</span><br><span class="line">        <span class="built_in">print</span>(poker.deal(), end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, nickname</span>):</span></span><br><span class="line">        self.nickname = nickname</span><br><span class="line">        self.cards = []</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_one_card</span>(<span class="params">self, card</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;摸一张牌&quot;&quot;&quot;</span></span><br><span class="line">        self.cards.append(card)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">arrange</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;对手里的牌排序&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># self.cards.sort(key=lambda x: int(x.face))</span></span><br><span class="line">        self.cards.sort()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">show</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;显示玩家手上的牌&quot;&quot;&quot;</span></span><br><span class="line">        ca = []</span><br><span class="line">        <span class="keyword">for</span> card <span class="keyword">in</span> self.cards:</span><br><span class="line">            ca.append(card)</span><br><span class="line">        <span class="keyword">return</span> ca</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    poker = Poker()</span><br><span class="line">    poker.shuffle()</span><br><span class="line">    names = [<span class="string">&#x27;温迪&#x27;</span>, <span class="string">&#x27;神里&#x27;</span>, <span class="string">&#x27;莫娜&#x27;</span>, <span class="string">&#x27;胡桃&#x27;</span>]</span><br><span class="line">    players = [Player(name) <span class="keyword">for</span> name <span class="keyword">in</span> names]</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">13</span>):</span><br><span class="line">        <span class="keyword">for</span> player <span class="keyword">in</span> players:</span><br><span class="line">            <span class="keyword">if</span> poker.has_more():</span><br><span class="line">                card = poker.deal()</span><br><span class="line">                player.get_one_card(card)</span><br><span class="line">                player.arrange()</span><br><span class="line">    <span class="keyword">for</span> player <span class="keyword">in</span> players:</span><br><span class="line">        player.show()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>一个扑克游戏，定义了三个类，这个练习在刚开始做的时候并不是很顺利，不知道该怎么做，但是在老师讲解的时候能听懂，如果自己定义类就很困难，不知道从何处下手。</p>
+<h3 id="继承和多态"><a href="#继承和多态" class="headerlink" title="继承和多态"></a>继承和多态</h3><p><strong>继承：</strong>对已有的类进行扩展创建出新的类，这个过程就叫继承。提供继承信息的类叫做父类（超类，基类），得到继承信息的类叫子类，子类直接从父类继承公共属性和行为，可以添加自己的特有属性和行为，所以子类都比父类要强大，任何时候都可以用子类对象去代替父类对象。在python中一个子类可以有多个父类，但是尽量不要使用多个父类。</p>
+<p><strong>多态</strong>：给不同的对象发出同样的消息，不同的对象执行了不同的行为。体现多态性就是重写父类中的方法，在重写方法的过程中，不同的子类可以对父类的同一个方法给出不同的实现版本，那么该方法在运行时就会表现出多态性为。</p>
+<p>我们用一个工资结算系统的例子来具体了解一下继承和多态</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">example06 - 工资结算系统</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author:YinYu</span></span><br><span class="line"><span class="string">Date:2021/8/7</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> abc <span class="keyword">import</span> abstractmethod</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee</span>:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;员工&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    __slots__ = (<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;number&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, name, number</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.number = number</span><br><span class="line"></span><br><span class="line"><span class="meta">    @abstractmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_salary</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Manager</span>(<span class="params">Employee</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;经理类&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_salary</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">15000</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Programmer</span>(<span class="params">Employee</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;程序员&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, name, number</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().__init__(name, number)</span><br><span class="line">        self.time = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_salary</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;工资结算&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">30</span> * <span class="number">200</span> * self.time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Salesman</span>(<span class="params">Employee</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;销售员&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, name, number</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().__init__(name, number)</span><br><span class="line">        self.sale = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_salary</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;工资结算&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> (self.sale * <span class="number">0.05</span>) + <span class="number">1800</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    emps = [Programmer(<span class="string">&#x27;关羽&#x27;</span>, <span class="string">&#x27;11&#x27;</span>), Manager(<span class="string">&#x27;刘备&#x27;</span>, <span class="string">&#x27;22&#x27;</span>),</span><br><span class="line">            Salesman(<span class="string">&#x27;诸葛亮&#x27;</span>, <span class="string">&#x27;33&#x27;</span>), Salesman(<span class="string">&#x27;周瑜&#x27;</span>, <span class="string">&#x27;44&#x27;</span>),</span><br><span class="line">            Programmer(<span class="string">&#x27;赵云&#x27;</span>, <span class="string">&#x27;55&#x27;</span>), Salesman(<span class="string">&#x27;曹操&#x27;</span>, <span class="string">&#x27;66&#x27;</span>)]</span><br><span class="line">    <span class="keyword">for</span> emp <span class="keyword">in</span> emps:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(emp) == Programmer:</span><br><span class="line">            emp.time = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">f&#x27;请输入<span class="subst">&#123;emp.name&#125;</span>的工作时长：&#x27;</span>))</span><br><span class="line">        <span class="keyword">elif</span> <span class="built_in">type</span>(emp) == Salesman:</span><br><span class="line">            emp.sale = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">f&#x27;请输入<span class="subst">&#123;emp.name&#125;</span>的销售额：&#x27;</span>))</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;emp.name&#125;</span>本月工资<span class="subst">&#123;emp.get_salary()&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>上述代码中@abstractmethod是装饰器，代表该方法是一个抽象方法，没有具体实现。</p>
+<p>以上就是我对这个星期课程的理解。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这一个星期的课程更偏向理论性知识，在学递归和怎么抽象出一个类的时候，我感觉很烧脑，很多地方不明白为什么是这样子做的，但是在课后自己慢慢回想，一点点理解的时候能想明白，在写代码实现这个过程的时候，又会不知道该怎么写，在写汉诺塔时，最开始是直到理论，在宏观意义上该怎么实现，但是在写递归调用函数的时候，一直实现不了，最后是一直百度查资料，看别人的分析，才慢慢写出代码。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80(%E4%BA%8C)/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.408Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%B8%89%E5%91%A8%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E5%88%97%E8%A1%A8%E7%9A%84%E6%8E%92%E5%BA%8F%E5%92%8C%E5%8F%8D%E8%BD%AC/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.398Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.388Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E5%9B%9B%E5%91%A8%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.368Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%94%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.338Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E5%9B%9B%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%B8%89%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.268Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.228Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%BA%8C%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.169Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.169Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -402,8 +447,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

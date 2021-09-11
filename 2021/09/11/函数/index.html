@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | YY行空</title>
+  <title>YY行空</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="函数当我们在编写代码的时候，很多代码块会在你的程序中重复出现，重复代码在你的程序中出现，那么就说明你的程序是不好的，要写出高质量的代码，就要解决代码重复出现之歌问题。而函数就可以很好地解决代码重复这个糟糕的问题，我们把实现一定功能的代码封装在函数中，当你需要实现这个功能的时候，你只需要调用这个函数就好了。 定义函数在python中的函数和数学上的函数是一致的，有函数名，自变量和因变量。定义一个函数">
+<meta property="og:type" content="article">
 <meta property="og:title" content="YY行空">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2021/09/11/%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="YY行空">
+<meta property="og:description" content="函数当我们在编写代码的时候，很多代码块会在你的程序中重复出现，重复代码在你的程序中出现，那么就说明你的程序是不好的，要写出高质量的代码，就要解决代码重复出现之歌问题。而函数就可以很好地解决代码重复这个糟糕的问题，我们把实现一定功能的代码封装在函数中，当你需要实现这个功能的时候，你只需要调用这个函数就好了。 定义函数在python中的函数和数学上的函数是一致的，有函数名，自变量和因变量。定义一个函数">
 <meta property="og:locale">
+<meta property="article:published_time" content="2021-09-11T09:24:14.388Z">
+<meta property="article:modified_time" content="2021-08-04T12:05:46.359Z">
 <meta property="article:author" content="YinYu">
 <meta name="twitter:card" content="summary">
   
@@ -150,235 +154,163 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-函数" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>当我们在编写代码的时候，很多代码块会在你的程序中重复出现，重复代码在你的程序中出现，那么就说明你的程序是不好的，要写出高质量的代码，就要解决代码重复出现之歌问题。而函数就可以很好地解决代码重复这个糟糕的问题，我们把实现一定功能的代码封装在函数中，当你需要实现这个功能的时候，你只需要调用这个函数就好了。</p>
+<h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><p>在python中的函数和数学上的函数是一致的，有函数名，自变量和因变量。定义一个函数可以使用关键字def，在def后面接函数名和一个圆括号，括号里面可以放参数，也就是数学上的自变量，也可以不放参数。参数是当你调用这个函数时，可以从外界传递数据的一个载体，可以在括号里设置参数的默认值，当你调用该函数没有传参时，就是用设置的默认参数值。一个函数还拥有函数体，就是需要执行的功能，还有return，return可以返回函数的执行结果。例如计算组合数C（m，n），要计算m！，n！，（m - n）！，如果不借助内置函数，那么这就是一段重复实现功能的代码块。我们可以对这段代码重构（在不影响结果的情况下，重新调整代码结构）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">example02 - 定义和使用函数</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">关键字def定义一个函数，使用函数名调用函数，可以不设置参数，设置参数时可以设置默认参数</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author: YinYu</span></span><br><span class="line"><span class="string">Date: 2021/8/2</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fac</span>(<span class="params">num</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    计算阶乘</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    :param num: 需要计算阶乘的数</span></span><br><span class="line"><span class="string">    :return: 返回计算出来的阶乘</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    f = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, num + <span class="number">1</span>):</span><br><span class="line">        f *= i</span><br><span class="line">    <span class="keyword">return</span> f</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;a = &#x27;</span>))</span><br><span class="line">b = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;b = &#x27;</span>))</span><br><span class="line"><span class="comment"># 计算C(a，b)的组合数</span></span><br><span class="line"><span class="built_in">print</span>(fac(a) // fac(b) // fac(a - b))</span><br></pre></td></tr></table></figure>
+
+<h3 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h3><p>函数的参数可以有，也可以没有，但是函数名后面的括号必须有，参数还可以设置默认值，如果调用时没有传参，那么就使用默认值。在定义函数时，写在*号前面的叫位置参数，在调用参数的时候只需要对号入座即可；写在后面的叫命名关键字参数（关键字参数），在调用函数传递参数时，必须使用‘参数名=数值’的形式。在设置函数的参数时，如果要同时使用位置参数和关键字参数，位置参数必须放在关键字参数的前面，不然会出现SyntaxError。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">test02 - 构造函数，抽取双色球</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author: YinYu</span></span><br><span class="line"><span class="string">Date: 2021/8/2</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">select_balls</span>(<span class="params">ball_max=<span class="number">34</span>, num=<span class="number">6</span></span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    选择球</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    :param ball_max: 球最大号码</span></span><br><span class="line"><span class="string">    :param num:要抽取的数量</span></span><br><span class="line"><span class="string">    :return:返回抽取球列表</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    balls = [i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, ball_max + <span class="number">1</span>)]</span><br><span class="line">    select_ball = random.sample(balls, k=num)</span><br><span class="line">    select_ball.sort()</span><br><span class="line">    <span class="keyword">return</span> select_ball</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">big_lottery</span>():</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    大乐透游戏</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    :return: 返回选中球的列表</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> select_balls(<span class="number">35</span>, <span class="number">5</span>) + select_balls(<span class="number">12</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">union_lotto</span>():</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    双色球游戏</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    :return: 返回双色球列表</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> select_balls(<span class="number">33</span>, <span class="number">6</span>) + select_balls(<span class="number">16</span>, <span class="number">1</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">display</span>(<span class="params">balls</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    显示一组彩票号码</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    :param balls: 抽中的号码列表</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> ball <span class="keyword">in</span> balls:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;ball:<span class="number">0</span>&gt;2d&#125;</span>&#x27;</span>, end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;机选几注：&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;双色球：&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    display(union_lotto())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;大乐透：&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    display(big_lottery())</span><br></pre></td></tr></table></figure>
+
+<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><p>在设计函数时，在不确定函数参数的情况下，可以使用可变参数，在参数前加上*号，代表可变参数，可变参数可以接收零个或任意多个数值，可变参数把接收到的任意个数据打包成元组的形式。如归没有传递参数，那么就是空元组。当我们在调用函数传递参数时，想必须把参数名显示出来，而且不确定有多少个参数时，我们可以使用**kwargs，它表示零个或多个关键字参数，可以把接收到的数据装入字典里。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">*args, **kwargs</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    对任意个整数求和</span></span><br><span class="line"><span class="string">    :param args: 0个或任意多个位置参数</span></span><br><span class="line"><span class="string">    :param kwargs: 0个或任意多个关键字参数</span></span><br><span class="line"><span class="string">    :return: 返回求和数值</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> args:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(arg) <span class="keyword">in</span> (<span class="built_in">int</span>, <span class="built_in">float</span>):</span><br><span class="line">            total += arg</span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> kwargs.values():</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(value) <span class="keyword">in</span> (<span class="built_in">int</span>, <span class="built_in">float</span>):</span><br><span class="line">            total += value</span><br><span class="line">    <span class="keyword">return</span> total</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="built_in">print</span>(add())</span><br><span class="line">    <span class="built_in">print</span>(add(<span class="number">1</span>))</span><br><span class="line">    <span class="built_in">print</span>(add(<span class="number">1</span>, <span class="number">2</span>))</span><br><span class="line">    <span class="built_in">print</span>(add(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))</span><br><span class="line">    <span class="built_in">print</span>(add(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="string">&#x27;4&#x27;</span>))</span><br><span class="line">    <span class="built_in">print</span>(add(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, a=<span class="string">&#x27;4&#x27;</span>, b=<span class="number">2</span>, c=<span class="number">1</span>))</span><br><span class="line">    <span class="built_in">print</span>(add(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="string">&#x27;4&#x27;</span>, x=<span class="string">&#x27;hello&#x27;</span>))</span><br><span class="line">    <span class="built_in">print</span>(mul(<span class="number">6</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="string">&#x27;4&#x27;</span>, x=<span class="string">&#x27;hello&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="全局变量和局部变量"><a href="#全局变量和局部变量" class="headerlink" title="全局变量和局部变量"></a>全局变量和局部变量</h3><p>全局变量就是没有写在任何函数里面的变量，它的作用域是在全局；局部变量就是定义在函数内部的变量，它的作用域是在函数内部，当不再函数中时，局部变量将失效。在Python中搜索变量时，是按照LEGB顺序进行搜索的，Local（局部作用域）—&gt; Embeded（嵌套作用域）—&gt; Global(全局作用域)—&gt; Built-in(内置作用域)。当我们在函数中声明一个变量时，如果我们不想声明局部变量，这时，我们可以使用关键字global，它的作用就是声明使用全局变量或者将局部变量放到全局作用域。这里还有一个关键字nonlocal，它的作用是声明使用嵌套作用域的变量（不使用局部变量）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">example01 - </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Author: YinYu</span></span><br><span class="line"><span class="string">Date: 2021/8/2</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">x = <span class="number">100</span>   <span class="comment"># 全局变量，作用于全局</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span>():</span></span><br><span class="line">    <span class="comment"># global x   # 声明全部变量，更改为200</span></span><br><span class="line">    x = <span class="number">200</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">bar</span>():</span></span><br><span class="line">        <span class="keyword">nonlocal</span> x  <span class="comment"># 声明嵌套作用域的变量</span></span><br><span class="line">        x = <span class="number">300</span></span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line"></span><br><span class="line">    bar()</span><br><span class="line">    <span class="built_in">print</span>(x)   <span class="comment"># 输出局部变量</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">foo()</span><br><span class="line"><span class="built_in">print</span>(x)  <span class="comment"># 输出全局变量</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="comment"># 300</span></span><br><span class="line"><span class="comment"># 300</span></span><br><span class="line"><span class="comment"># 100</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80(%E4%BA%8C)/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.408Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/09/11/%E5%87%BD%E6%95%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E5%88%97%E8%A1%A8%E7%9A%84%E6%8E%92%E5%BA%8F%E5%92%8C%E5%8F%8D%E8%BD%AC/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.398Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.388Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2021/09/11/%E5%88%97%E8%A1%A8%E7%9A%84%E6%8E%92%E5%BA%8F%E5%92%8C%E5%8F%8D%E8%BD%AC/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/09/11/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.368Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%94%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.338Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E5%9B%9B%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.308Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%B8%89%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.268Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.228Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/Python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%BA%8C%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.169Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/11/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2021-09-11T09:24:14.169Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -402,8 +334,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
